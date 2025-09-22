@@ -1,0 +1,6 @@
+/OUTPUTS/*
+/DRAIN_CACHE/*
+/XML_CACHE/*
+/_pycache__/*
+*.bin
+*.pkl
