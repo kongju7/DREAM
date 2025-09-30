@@ -1,0 +1,95 @@
+08:59:05.546 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 111일 전
+08:59:05.557 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 111일 전
+08:59:05.557 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 111일 전
+08:59:05.558 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 111일 전
+08:59:05.559 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 111일 전
+08:59:05.559 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 111일 전
+08:59:05.571 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+08:59:05.577 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+08:59:07.561 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+08:59:08.379 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 814 ms.]
+08:59:08.379 [Thread-1] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+08:59:08.379 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+08:59:08.723 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+08:59:08.956 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+08:59:08.959 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+09:01:13.797 [http-nio-40001-exec-5] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-1ed80dfdedc3bd898c60a9460999240b:TIME=2025-08-21T00:01:13.101Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+09:01:14.042 [http-nio-40001-exec-5] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-d615c3ef8fc73a33f6abb30555976dad:InResponseTo=SP-1ed80dfdedc3bd898c60a9460999240b:TIME=2025-08-21T00:01:13.987Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-20T00:01:13.987Z:NOT_AFTER=2025-08-22T00:01:13.987Z:AUTHN_CONTEXT=Password>
+09:01:14.064 [http-nio-40001-exec-5] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-d615c3ef8fc73a33f6abb30555976dad:InResponseTo=SP-1ed80dfdedc3bd898c60a9460999240b:TIME=2025-08-21T00:01:13.987Z:ISSUER=TEST_IDP:STATUS=Success>
+09:01:15.956 [Thread-3] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+09:01:15.956 [Thread-3] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+09:01:15.957 [Thread-3] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+09:01:21.130 [http-nio-40001-exec-3] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-edd8e978a971dca4f7e32f9d81d38a85:TIME=2025-08-21T00:01:20.832Z:ISSUER=TEST_SP2:PROVIDER=TEST_SP2:DEST=idp.dev.com:40001:CONSUMER=sp2.dev.com:40007:USER=__EMPTY_ID:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+09:01:21.150 [http-nio-40001-exec-3] INFO  c.d.s.s.p.IdentificationProvider - ### AuthSession Compare Result: True (connect)
+09:01:21.233 [http-nio-40001-exec-3] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-59504c740be925bb62558d5543e1f765:InResponseTo=SP-edd8e978a971dca4f7e32f9d81d38a85:TIME=2025-08-21T00:01:21.211Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-20T00:01:21.211Z:NOT_AFTER=2025-08-22T00:01:21.211Z:AUTHN_CONTEXT=Password>
+09:01:21.242 [http-nio-40001-exec-3] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-59504c740be925bb62558d5543e1f765:InResponseTo=SP-edd8e978a971dca4f7e32f9d81d38a85:TIME=2025-08-21T00:01:21.211Z:ISSUER=TEST_IDP:STATUS=Success>
+09:01:35.036 [http-nio-40001-exec-1] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-60cb5c6896a1447a6426ef1d2c292a5b:TIME=2025-08-21T00:01:34.846Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+09:01:35.123 [http-nio-40001-exec-1] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-16b46ee3233fd83562100d32db60b228:InResponseTo=SP-60cb5c6896a1447a6426ef1d2c292a5b:TIME=2025-08-21T00:01:35.103Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-20T00:01:35.103Z:NOT_AFTER=2025-08-22T00:01:35.103Z:AUTHN_CONTEXT=Password>
+09:01:35.130 [http-nio-40001-exec-1] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-16b46ee3233fd83562100d32db60b228:InResponseTo=SP-60cb5c6896a1447a6426ef1d2c292a5b:TIME=2025-08-21T00:01:35.103Z:ISSUER=TEST_IDP:STATUS=Success>
+09:01:37.100 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+09:01:37.100 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+09:01:37.100 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+09:02:09.483 [Thread-5] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+09:02:09.483 [Thread-5] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+09:02:09.483 [Thread-5] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+09:02:36.836 [Thread-6] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+09:02:36.837 [Thread-6] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+09:02:36.837 [Thread-6] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+09:02:40.397 [http-nio-40001-exec-2] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-c195f4fd743f5e0680b8c64c732ee656:TIME=2025-08-21T00:02:40.213Z:ISSUER=TEST_SP2:PROVIDER=TEST_SP2:DEST=idp.dev.com:40001:CONSUMER=sp2.dev.com:40007:USER=__EMPTY_ID:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+09:02:40.413 [http-nio-40001-exec-2] INFO  c.d.s.s.p.IdentificationProvider - ### AuthSession Compare Result: True (connect)
+09:02:40.473 [http-nio-40001-exec-2] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-72f27f9704dcc57ad91180c43cc3e449:InResponseTo=SP-c195f4fd743f5e0680b8c64c732ee656:TIME=2025-08-21T00:02:40.454Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-20T00:02:40.454Z:NOT_AFTER=2025-08-22T00:02:40.454Z:AUTHN_CONTEXT=Password>
+09:02:40.482 [http-nio-40001-exec-2] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-72f27f9704dcc57ad91180c43cc3e449:InResponseTo=SP-c195f4fd743f5e0680b8c64c732ee656:TIME=2025-08-21T00:02:40.454Z:ISSUER=TEST_IDP:STATUS=Success>
+09:04:11.650 [Thread-1] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Connect Test Start ...
+09:04:11.653 [Thread-1] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Status is Good [ 3 ms.]
+09:12:43.934 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 111일 전
+09:12:43.940 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 111일 전
+09:12:43.943 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 111일 전
+09:12:43.946 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 111일 전
+09:12:43.949 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 111일 전
+09:12:43.951 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 111일 전
+09:12:43.962 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+09:12:43.968 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+09:12:46.657 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+09:12:48.191 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 1527 ms.]
+09:12:48.191 [Thread-1] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+09:12:48.191 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+09:12:48.607 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+09:12:48.730 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+09:12:48.735 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+09:13:20.543 [http-nio-40001-exec-4] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-129277b43cfe3397c62c9e2e9235afa4:TIME=2025-08-21T00:13:19.916Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+09:13:20.747 [http-nio-40001-exec-4] ERROR c.d.s.s.a.user.service.UserService - ### 인증 실패: ssouser, Password mismatch. left try count: 4
+09:13:20.747 [http-nio-40001-exec-4] ERROR c.d.s.s.a.u.service.base.UserBase - ### login failed: user=ssouser, result=AD
+09:13:20.748 [http-nio-40001-exec-4] DEBUG c.d.sso.server.util.Util - ### error code: 10003, message: Password mismatch. left try count: 4
+09:13:35.049 [http-nio-40001-exec-9] ERROR c.d.s.s.a.user.service.UserService - ### 인증 실패: ssouser, Password mismatch. left try count: 3
+09:13:35.049 [http-nio-40001-exec-9] ERROR c.d.s.s.a.u.service.base.UserBase - ### login failed: user=ssouser, result=AD
+09:13:35.051 [http-nio-40001-exec-9] ERROR c.d.s.s.controller.OidcController - ### oidcAuthenticate: oidcLogin: 9049, Password mismatch. left try count: 3
+09:16:13.340 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 111일 전
+09:16:13.343 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 111일 전
+09:16:13.344 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 111일 전
+09:16:13.344 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 111일 전
+09:16:13.345 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 111일 전
+09:16:13.345 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 111일 전
+09:16:13.357 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+09:16:13.363 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+09:16:15.287 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+09:16:15.922 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 631 ms.]
+09:16:15.923 [Thread-1] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+09:16:15.923 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+09:16:16.234 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+09:16:16.350 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+09:16:16.353 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+09:18:18.419 [http-nio-40001-exec-3] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-50b60ece6f5074e15343af77b3aa2133:TIME=2025-08-21T00:18:17.006Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+09:18:18.693 [http-nio-40001-exec-3] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-adb771d68adeb9b254c546360bb8ef9a:InResponseTo=SP-50b60ece6f5074e15343af77b3aa2133:TIME=2025-08-21T00:18:18.640Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-20T00:18:18.640Z:NOT_AFTER=2025-08-22T00:18:18.640Z:AUTHN_CONTEXT=Password>
+09:18:18.714 [http-nio-40001-exec-3] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-adb771d68adeb9b254c546360bb8ef9a:InResponseTo=SP-50b60ece6f5074e15343af77b3aa2133:TIME=2025-08-21T00:18:18.640Z:ISSUER=TEST_IDP:STATUS=Success>
+09:18:20.630 [Thread-3] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+09:18:20.631 [Thread-3] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+09:18:20.631 [Thread-3] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+09:21:18.592 [Thread-1] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Connect Test Start ...
+09:21:18.593 [Thread-1] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Status is Good [ 1 ms.]
+09:24:07.389 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+09:24:07.389 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+09:24:07.389 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+09:26:21.243 [Thread-1] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Connect Test Start ...
+09:26:21.244 [Thread-1] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Status is Good [ 1 ms.]
+09:31:24.070 [Thread-1] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Connect Test Start ...
+09:31:24.072 [Thread-1] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Status is Good [ 2 ms.]

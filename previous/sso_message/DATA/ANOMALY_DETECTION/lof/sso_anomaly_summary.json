@@ -1,0 +1,68 @@
+{
+  "탐지_요약": {
+    "모델명": "Local Outlier Factor",
+    "모델_타입": "local_outlier_factor",
+    "모델_설명": "지역 밀도 기반 이상탐지. 국소적 이상치 탐지에 강력",
+    "총_트랜잭션수": 59,
+    "정상_트랜잭션수": 53,
+    "이상_트랜잭션수": 6,
+    "이상치_비율": 10.16949152542373
+  },
+  "SP별_이상치_분포": {
+    "TEST_SP2": 3,
+    "TEST_SP1": 2,
+    "Unknown": 1
+  },
+  "시간대별_이상치_분포": {
+    "6": 3,
+    "9": 1,
+    "10": 1
+  },
+  "모델_파라미터": {
+    "algorithm": "Local Outlier Factor",
+    "model_type": "local_outlier_factor",
+    "parameters": {
+      "contamination": 0.1
+    },
+    "features_used": 22,
+    "feature_names": [
+      "hour",
+      "minute",
+      "day_of_week",
+      "is_weekend",
+      "is_business_hours",
+      "is_complete",
+      "is_success",
+      "transaction_duration_filled",
+      "request_id_length",
+      "response_id_length",
+      "time_since_last",
+      "hourly_transaction_count",
+      "duration_z_score",
+      "sp_provider",
+      "sp_TEST_SP1",
+      "sp_TEST_SP2",
+      "sp_nan",
+      "source_idp__ssoserver.log",
+      "source_idp_log__ssoserver.log",
+      "source_idp_log__ssoserver_20250820.log",
+      "source_sp_log__ssoagent_20250820.log",
+      "source_nan"
+    ]
+  },
+  "모델_성능": {
+    "name": "Local Outlier Factor",
+    "description": "지역 밀도 기반 이상탐지. 국소적 이상치 탐지에 강력",
+    "pros": [
+      "국소적 이상치 탐지",
+      "밀도 기반 접근",
+      "직관적 결과"
+    ],
+    "cons": [
+      "계산 비용 높음",
+      "차원의 저주",
+      "메모리 사용량 많음"
+    ],
+    "best_for": "중소규모 데이터, 클러스터 내 이상치 탐지"
+  }
+}

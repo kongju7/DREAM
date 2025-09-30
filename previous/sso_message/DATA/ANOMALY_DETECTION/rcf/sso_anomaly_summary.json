@@ -1,0 +1,61 @@
+{
+  "탐지_요약": {
+    "모델명": "Random Cut Forest (Ensemble)",
+    "모델_타입": "random_cut_forest",
+    "모델_설명": "RRCF 라이브러리 기반 전문적 이상탐지 (Collusive Displacement 사용)",
+    "총_트랜잭션수": 59,
+    "정상_트랜잭션수": 59,
+    "이상_트랜잭션수": 0,
+    "이상치_비율": 0.0
+  },
+  "SP별_이상치_분포": {},
+  "시간대별_이상치_분포": {},
+  "모델_파라미터": {
+    "algorithm": "Random Cut Forest (Ensemble)",
+    "model_type": "random_cut_forest",
+    "parameters": {
+      "contamination": 0.1
+    },
+    "features_used": 22,
+    "feature_names": [
+      "hour",
+      "minute",
+      "day_of_week",
+      "is_weekend",
+      "is_business_hours",
+      "is_complete",
+      "is_success",
+      "transaction_duration_filled",
+      "request_id_length",
+      "response_id_length",
+      "time_since_last",
+      "hourly_transaction_count",
+      "duration_z_score",
+      "sp_provider",
+      "sp_TEST_SP1",
+      "sp_TEST_SP2",
+      "sp_nan",
+      "source_idp__ssoserver.log",
+      "source_idp_log__ssoserver.log",
+      "source_idp_log__ssoserver_20250820.log",
+      "source_sp_log__ssoagent_20250820.log",
+      "source_nan"
+    ]
+  },
+  "모델_성능": {
+    "name": "Random Cut Forest",
+    "description": "RRCF 라이브러리 기반 전문적 이상탐지 (Collusive Displacement 사용)",
+    "pros": [
+      "정확한 RRCF 알고리즘",
+      "스트리밍 지원",
+      "메모리 효율적",
+      "시계열 특화"
+    ],
+    "cons": [
+      "외부 라이브러리 의존",
+      "설정 복잡성",
+      "rrcf 설치 필요"
+    ],
+    "best_for": "전문적 이상탐지, 스트리밍 데이터, 시계열 분석"
+  }
+}

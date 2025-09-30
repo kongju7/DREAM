@@ -1,0 +1,16 @@
+=== 데이터 전처리 통계 ===
+total_events: 11
+total_sessions: 3
+avg_events_per_session: 3.6666666666666665
+success_rate: 0.6666666666666666
+avg_session_duration_ms: 2666.6666666666665
+anomalous_sessions_count: 0
+
+=== 이상 점수 분포 ===
+평균: 0.566
+표준편차: 0.245
+최소값: 0.424
+최대값: 0.849
+
+상위 10% 이상 세션 (1개):
+  세션 f1e2d3c4b5a6: 점수 0.849

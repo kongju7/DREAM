@@ -1,0 +1,449 @@
+17:18:53.657 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+17:18:53.675 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+17:18:53.677 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+17:18:53.678 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+17:18:53.679 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+17:18:53.680 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+17:18:53.708 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+17:18:53.718 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+17:18:56.608 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+17:18:57.469 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 854 ms.]
+17:18:57.469 [Thread-2] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+17:18:57.469 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+17:18:57.774 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+17:18:57.897 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+17:18:57.900 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+17:19:35.062 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+17:19:35.070 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+17:19:35.071 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+17:19:35.072 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+17:19:35.073 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+17:19:35.074 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+17:19:35.109 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+17:19:35.121 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+17:19:39.407 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+17:19:40.487 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 1074 ms.]
+17:19:40.487 [Thread-2] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+17:19:40.488 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+17:19:40.875 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+17:19:41.037 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+17:19:41.041 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+17:20:28.721 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+17:20:28.730 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+17:20:28.731 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+17:20:28.732 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+17:20:28.733 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+17:20:28.733 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+17:20:28.758 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+17:20:28.767 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+17:20:31.916 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+17:20:32.759 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 837 ms.]
+17:20:32.759 [Thread-2] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+17:20:32.759 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+17:20:33.075 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+17:20:33.217 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+17:20:33.220 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+17:20:34.734 [http-nio-40001-exec-1] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:20:34.735 [http-nio-40001-exec-1] ERROR c.d.s.s.a.a.service.AdminService - ### decryptAdminIP() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:20:45.517 [http-nio-40001-exec-2] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-225d5f55759f4966714d6e450df30f3c:TIME=2025-08-20T08:20:43.507Z:ISSUER=TEST_SP2:PROVIDER=TEST_SP2:DEST=idp.dev.com:40001:CONSUMER=sp2.dev.com:40007:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+17:20:45.762 [http-nio-40001-exec-2] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:20:45.763 [http-nio-40001-exec-2] ERROR c.d.s.s.a.user.service.UserService - ### decryptUserInfo() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:20:45.974 [http-nio-40001-exec-2] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-ee7bdaf7bb79128b8ac3fe3a62c7a72b:InResponseTo=SP-225d5f55759f4966714d6e450df30f3c:TIME=2025-08-20T08:20:45.893Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T08:20:45.893Z:NOT_AFTER=2025-08-21T08:20:45.893Z:AUTHN_CONTEXT=Password>
+17:20:46.009 [http-nio-40001-exec-2] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-ee7bdaf7bb79128b8ac3fe3a62c7a72b:InResponseTo=SP-225d5f55759f4966714d6e450df30f3c:TIME=2025-08-20T08:20:45.893Z:ISSUER=TEST_IDP:STATUS=Success>
+17:20:47.820 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+17:20:47.821 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+17:20:47.821 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+17:21:21.039 [http-nio-40001-exec-6] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-1d58563fa48a4937684b41f4e75b4d5f:TIME=2025-08-20T08:21:20.345Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=__EMPTY_ID:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+17:22:10.982 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+17:22:10.988 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+17:22:10.988 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+17:22:10.989 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+17:22:10.989 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+17:22:10.989 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+17:22:11.008 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+17:22:11.016 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+17:22:14.580 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+17:22:15.515 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 930 ms.]
+17:22:15.515 [Thread-2] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+17:22:15.515 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+17:22:15.808 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+17:22:15.934 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+17:22:15.937 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+17:22:16.257 [http-nio-40001-exec-3] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:22:16.258 [http-nio-40001-exec-3] ERROR c.d.s.s.a.a.service.AdminService - ### decryptAdminIP() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:22:42.829 [http-nio-40001-exec-6] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-3ae11e0ecae00b64e3774f00cf4e4bd7:TIME=2025-08-20T08:22:42.357Z:ISSUER=TEST_SP2:PROVIDER=TEST_SP2:DEST=idp.dev.com:40001:CONSUMER=sp2.dev.com:40007:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+17:22:49.757 [http-nio-40001-exec-6] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:22:49.758 [http-nio-40001-exec-6] ERROR c.d.s.s.a.user.service.UserService - ### decryptUserInfo() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:22:50.051 [http-nio-40001-exec-6] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-073fec4dc79e890763960253886a802e:InResponseTo=SP-3ae11e0ecae00b64e3774f00cf4e4bd7:TIME=2025-08-20T08:22:49.923Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T08:22:49.923Z:NOT_AFTER=2025-08-21T08:22:49.923Z:AUTHN_CONTEXT=Password>
+17:22:50.098 [http-nio-40001-exec-6] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-073fec4dc79e890763960253886a802e:InResponseTo=SP-3ae11e0ecae00b64e3774f00cf4e4bd7:TIME=2025-08-20T08:22:49.923Z:ISSUER=TEST_IDP:STATUS=Success>
+17:22:51.824 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+17:22:51.825 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+17:22:51.825 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+17:23:18.047 [http-nio-40001-exec-10] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-75049b8a2469b6567e868e1afe4bde11:TIME=2025-08-20T08:23:17.424Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=__EMPTY_ID:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+17:23:46.915 [http-nio-40001-exec-8] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-9d8dada5d75b4fb387df0edca8540394:TIME=2025-08-20T08:23:46.638Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=__EMPTY_ID:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+17:23:48.845 [http-nio-40001-exec-9] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-f2e42ba5b3a1ca6509f8fd50d9571a93:TIME=2025-08-20T08:23:48.545Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=__EMPTY_ID:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+17:25:02.825 [http-nio-40001-exec-2] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-8c30a0d40ba12afad29f2467e4f33017:TIME=2025-08-20T08:25:02.567Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=__EMPTY_ID:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+17:27:17.877 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Connect Test Start ...
+17:27:17.886 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Status is Good [ 9 ms.]
+17:27:17.954 [Thread-2] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:27:17.955 [Thread-2] ERROR c.d.s.s.r.c.DBConnectMonitor - ### checkAudit() Exception : com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:28:30.697 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+17:28:30.711 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+17:28:30.715 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+17:28:30.719 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+17:28:30.723 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+17:28:30.727 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+17:28:30.759 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+17:28:30.770 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+17:28:35.694 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+17:28:37.489 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 1785 ms.]
+17:28:37.489 [Thread-2] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+17:28:37.493 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+17:28:38.495 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+17:28:38.694 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+17:28:38.698 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+17:28:39.249 [http-nio-40001-exec-1] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:28:39.250 [http-nio-40001-exec-1] ERROR c.d.s.s.a.a.service.AdminService - ### decryptAdminIP() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:29:35.804 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+17:29:35.814 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+17:29:35.815 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+17:29:35.816 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+17:29:35.817 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+17:29:35.818 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+17:29:35.847 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+17:29:35.858 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+17:29:40.859 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+17:29:42.029 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 1164 ms.]
+17:29:42.029 [Thread-2] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+17:29:42.030 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+17:29:42.455 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+17:29:42.607 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+17:29:42.611 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+17:29:43.043 [http-nio-40001-exec-3] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:29:43.044 [http-nio-40001-exec-3] ERROR c.d.s.s.a.a.service.AdminService - ### decryptAdminIP() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:30:05.664 [http-nio-40001-exec-1] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-19f27abe88f7f7a83cc3f1ef8a400929:TIME=2025-08-20T08:30:05.030Z:ISSUER=TEST_SP2:PROVIDER=TEST_SP2:DEST=idp.dev.com:40001:CONSUMER=sp2.dev.com:40007:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+17:30:09.559 [http-nio-40001-exec-1] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:30:09.560 [http-nio-40001-exec-1] ERROR c.d.s.s.a.user.service.UserService - ### decryptUserInfo() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:30:09.814 [http-nio-40001-exec-1] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-910724106f355f949b0723ea5ca1d0e4:InResponseTo=SP-19f27abe88f7f7a83cc3f1ef8a400929:TIME=2025-08-20T08:30:09.703Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T08:30:09.703Z:NOT_AFTER=2025-08-21T08:30:09.703Z:AUTHN_CONTEXT=Password>
+17:30:09.859 [http-nio-40001-exec-1] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-910724106f355f949b0723ea5ca1d0e4:InResponseTo=SP-19f27abe88f7f7a83cc3f1ef8a400929:TIME=2025-08-20T08:30:09.703Z:ISSUER=TEST_IDP:STATUS=Success>
+17:30:11.610 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+17:30:11.611 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+17:30:11.611 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+17:30:37.776 [http-nio-40001-exec-5] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-6f8f9bb436603d6bb17ca49f2bb41581:TIME=2025-08-20T08:30:37.149Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=__EMPTY_ID:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+17:34:16.227 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+17:34:16.234 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+17:34:16.236 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+17:34:16.236 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+17:34:16.237 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+17:34:16.238 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+17:34:16.267 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+17:34:16.279 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+17:34:20.828 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+17:34:22.270 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 1436 ms.]
+17:34:22.270 [Thread-2] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+17:34:22.270 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+17:34:23.092 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+17:34:23.290 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+17:34:23.294 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+17:34:24.045 [http-nio-40001-exec-3] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:34:24.046 [http-nio-40001-exec-3] ERROR c.d.s.s.a.a.service.AdminService - ### decryptAdminIP() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:34:43.306 [http-nio-40001-exec-7] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-f33619d456372fe3476429e871facf96:TIME=2025-08-20T08:34:42.688Z:ISSUER=TEST_SP2:PROVIDER=TEST_SP2:DEST=idp.dev.com:40001:CONSUMER=sp2.dev.com:40007:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+17:34:45.704 [http-nio-40001-exec-7] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:34:45.704 [http-nio-40001-exec-7] ERROR c.d.s.s.a.user.service.UserService - ### decryptUserInfo() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:34:45.932 [http-nio-40001-exec-7] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-dadec45718b4b593fb43aef18d534a04:InResponseTo=SP-f33619d456372fe3476429e871facf96:TIME=2025-08-20T08:34:45.837Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T08:34:45.837Z:NOT_AFTER=2025-08-21T08:34:45.837Z:AUTHN_CONTEXT=Password>
+17:34:45.969 [http-nio-40001-exec-7] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-dadec45718b4b593fb43aef18d534a04:InResponseTo=SP-f33619d456372fe3476429e871facf96:TIME=2025-08-20T08:34:45.837Z:ISSUER=TEST_IDP:STATUS=Success>
+17:34:47.763 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+17:34:47.763 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+17:34:47.764 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+17:35:00.867 [http-nio-40001-exec-10] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-c7cf457ec607483af4bdd558c5e553b5:TIME=2025-08-20T08:35:00.438Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=__EMPTY_ID:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+17:39:24.651 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Connect Test Start ...
+17:39:24.662 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Status is Good [ 9 ms.]
+17:39:24.720 [Thread-2] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:39:24.720 [Thread-2] ERROR c.d.s.s.r.c.DBConnectMonitor - ### checkAudit() Exception : com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:44:35.585 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+17:44:35.591 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+17:44:35.592 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+17:44:35.592 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+17:44:35.593 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+17:44:35.594 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+17:44:35.617 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+17:44:35.626 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+17:44:40.295 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+17:44:41.665 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 1361 ms.]
+17:44:41.666 [Thread-2] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+17:44:41.666 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+17:44:42.396 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+17:44:42.581 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+17:44:42.586 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+17:44:43.199 [http-nio-40001-exec-4] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:44:43.199 [http-nio-40001-exec-4] ERROR c.d.s.s.a.a.service.AdminService - ### decryptAdminIP() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:46:37.822 [http-nio-40001-exec-7] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:48:51.336 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+17:48:51.351 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+17:48:51.357 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+17:48:51.358 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+17:48:51.362 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+17:48:51.365 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+17:48:51.400 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+17:48:51.416 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+17:48:56.603 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+17:48:57.988 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 1377 ms.]
+17:48:57.988 [Thread-2] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+17:48:57.989 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+17:48:58.606 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+17:48:58.796 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+17:48:58.803 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+17:49:34.795 [http-nio-40001-exec-6] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-ef01c8fa4e23fcc9588f0d8379c98ac9:TIME=2025-08-20T08:49:34.179Z:ISSUER=TEST_SP2:PROVIDER=TEST_SP2:DEST=idp.dev.com:40001:CONSUMER=sp2.dev.com:40007:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+17:49:40.155 [http-nio-40001-exec-6] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:49:40.155 [http-nio-40001-exec-6] ERROR c.d.s.s.a.user.service.UserService - ### decryptUserInfo() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:49:40.506 [http-nio-40001-exec-6] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-4ec9cec4ffd22d21add968c9001e30aa:InResponseTo=SP-ef01c8fa4e23fcc9588f0d8379c98ac9:TIME=2025-08-20T08:49:40.341Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T08:49:40.341Z:NOT_AFTER=2025-08-21T08:49:40.341Z:AUTHN_CONTEXT=Password>
+17:49:40.555 [http-nio-40001-exec-6] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-4ec9cec4ffd22d21add968c9001e30aa:InResponseTo=SP-ef01c8fa4e23fcc9588f0d8379c98ac9:TIME=2025-08-20T08:49:40.341Z:ISSUER=TEST_IDP:STATUS=Success>
+17:49:42.223 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+17:49:42.224 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+17:49:42.224 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+17:49:58.449 [http-nio-40001-exec-10] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-ad798f1c86898f63066e382c59191c6f:TIME=2025-08-20T08:49:57.986Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=__EMPTY_ID:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+17:54:00.383 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Connect Test Start ...
+17:54:00.415 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Status is Good [ 25 ms.]
+17:54:00.514 [Thread-2] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:54:00.515 [Thread-2] ERROR c.d.s.s.r.c.DBConnectMonitor - ### checkAudit() Exception : com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:59:02.962 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Connect Test Start ...
+17:59:02.969 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Status is Good [ 6 ms.]
+17:59:03.006 [Thread-2] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+17:59:03.006 [Thread-2] ERROR c.d.s.s.r.c.DBConnectMonitor - ### checkAudit() Exception : com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:04:05.413 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Connect Test Start ...
+18:04:05.421 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Status is Good [ 7 ms.]
+18:04:05.459 [Thread-2] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:04:05.459 [Thread-2] ERROR c.d.s.s.r.c.DBConnectMonitor - ### checkAudit() Exception : com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:07:52.176 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+18:07:52.184 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+18:07:52.185 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+18:07:52.186 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+18:07:52.187 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+18:07:52.188 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+18:07:52.219 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+18:07:52.233 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+18:07:57.466 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+18:07:58.888 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 1415 ms.]
+18:07:58.888 [Thread-2] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+18:07:58.888 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+18:07:59.439 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+18:07:59.634 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+18:07:59.637 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+18:08:12.891 [http-nio-40001-exec-6] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-58b47af8095b0539340dd98c439da3ed:TIME=2025-08-20T09:08:12.179Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+18:08:16.275 [http-nio-40001-exec-6] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:08:16.276 [http-nio-40001-exec-6] ERROR c.d.s.s.a.user.service.UserService - ### decryptUserInfo() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:08:16.564 [http-nio-40001-exec-6] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-b2be2a84dfe1fc6ab7e904227fba7b30:InResponseTo=SP-58b47af8095b0539340dd98c439da3ed:TIME=2025-08-20T09:08:16.442Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T09:08:16.442Z:NOT_AFTER=2025-08-21T09:08:16.442Z:AUTHN_CONTEXT=Password>
+18:08:16.613 [http-nio-40001-exec-6] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-b2be2a84dfe1fc6ab7e904227fba7b30:InResponseTo=SP-58b47af8095b0539340dd98c439da3ed:TIME=2025-08-20T09:08:16.442Z:ISSUER=TEST_IDP:STATUS=Success>
+18:08:18.346 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+18:08:18.347 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+18:08:18.347 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+18:08:55.985 [http-nio-40001-exec-5] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-38390a4474503819579f7e4152017cec:TIME=2025-08-20T09:08:55.504Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+18:08:59.005 [http-nio-40001-exec-5] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:08:59.006 [http-nio-40001-exec-5] ERROR c.d.s.s.a.user.service.UserService - ### decryptUserInfo() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:08:59.168 [http-nio-40001-exec-5] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-0942bce04283bca7e7bfb6e384b4f584:InResponseTo=SP-38390a4474503819579f7e4152017cec:TIME=2025-08-20T09:08:59.120Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T09:08:59.120Z:NOT_AFTER=2025-08-21T09:08:59.120Z:AUTHN_CONTEXT=Password>
+18:08:59.187 [http-nio-40001-exec-5] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-0942bce04283bca7e7bfb6e384b4f584:InResponseTo=SP-38390a4474503819579f7e4152017cec:TIME=2025-08-20T09:08:59.120Z:ISSUER=TEST_IDP:STATUS=Success>
+18:09:01.082 [Thread-5] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+18:09:01.082 [Thread-5] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+18:09:01.083 [Thread-5] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+18:09:41.610 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+18:09:41.622 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+18:09:41.623 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+18:09:41.624 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+18:09:41.625 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+18:09:41.626 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+18:09:41.660 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+18:09:41.676 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+18:09:45.497 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+18:09:46.529 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 1027 ms.]
+18:09:46.530 [Thread-2] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+18:09:46.530 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+18:09:46.998 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+18:09:47.137 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+18:09:47.141 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+18:09:58.641 [http-nio-40001-exec-4] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-bfa8458fac00d6111ad6e46c6a66ff6b:TIME=2025-08-20T09:09:56.748Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+18:10:01.393 [http-nio-40001-exec-4] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:10:01.393 [http-nio-40001-exec-4] ERROR c.d.s.s.a.user.service.UserService - ### decryptUserInfo() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:10:01.682 [http-nio-40001-exec-4] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-63b3c9df2844afa3cca916a468506eb3:InResponseTo=SP-bfa8458fac00d6111ad6e46c6a66ff6b:TIME=2025-08-20T09:10:01.581Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T09:10:01.581Z:NOT_AFTER=2025-08-21T09:10:01.581Z:AUTHN_CONTEXT=Password>
+18:10:01.719 [http-nio-40001-exec-4] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-63b3c9df2844afa3cca916a468506eb3:InResponseTo=SP-bfa8458fac00d6111ad6e46c6a66ff6b:TIME=2025-08-20T09:10:01.581Z:ISSUER=TEST_IDP:STATUS=Success>
+18:10:03.466 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+18:10:03.467 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+18:10:03.467 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+18:10:27.017 [http-nio-40001-exec-10] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-9a11021a88b0a801efd687a8c88a2ffc:TIME=2025-08-20T09:10:26.575Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+18:10:30.039 [http-nio-40001-exec-10] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:10:30.039 [http-nio-40001-exec-10] ERROR c.d.s.s.a.user.service.UserService - ### decryptUserInfo() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:10:30.178 [http-nio-40001-exec-10] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-a51749e8f28d03b7689cf14aa44a0542:InResponseTo=SP-9a11021a88b0a801efd687a8c88a2ffc:TIME=2025-08-20T09:10:30.133Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T09:10:30.133Z:NOT_AFTER=2025-08-21T09:10:30.133Z:AUTHN_CONTEXT=Password>
+18:10:30.193 [http-nio-40001-exec-10] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-a51749e8f28d03b7689cf14aa44a0542:InResponseTo=SP-9a11021a88b0a801efd687a8c88a2ffc:TIME=2025-08-20T09:10:30.133Z:ISSUER=TEST_IDP:STATUS=Success>
+18:10:32.087 [Thread-5] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+18:10:32.087 [Thread-5] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+18:10:32.087 [Thread-5] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+18:14:48.983 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Connect Test Start ...
+18:14:48.991 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Status is Good [ 7 ms.]
+18:14:49.042 [Thread-2] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:14:49.042 [Thread-2] ERROR c.d.s.s.r.c.DBConnectMonitor - ### checkAudit() Exception : com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:19:51.354 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Connect Test Start ...
+18:19:51.359 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Status is Good [ 5 ms.]
+18:19:51.391 [Thread-2] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:19:51.391 [Thread-2] ERROR c.d.s.s.r.c.DBConnectMonitor - ### checkAudit() Exception : com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:21:35.367 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+18:21:35.380 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+18:21:35.383 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+18:21:35.386 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+18:21:35.387 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+18:21:35.390 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+18:21:35.432 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+18:21:35.447 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+18:21:41.520 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+18:21:43.006 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 1476 ms.]
+18:21:43.006 [Thread-2] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+18:21:43.006 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+18:21:43.559 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+18:21:43.758 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+18:21:43.763 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+18:22:01.427 [http-nio-40001-exec-3] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-7586c6e6cc0f071161d863bec8097409:TIME=2025-08-20T09:21:58.738Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+18:22:01.927 [http-nio-40001-exec-3] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:22:01.927 [http-nio-40001-exec-3] ERROR c.d.s.s.a.user.service.UserService - ### decryptUserInfo() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:22:02.197 [http-nio-40001-exec-3] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-41264f15d459c1d265c7f824a983a124:InResponseTo=SP-7586c6e6cc0f071161d863bec8097409:TIME=2025-08-20T09:22:02.081Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T09:22:02.081Z:NOT_AFTER=2025-08-21T09:22:02.081Z:AUTHN_CONTEXT=Password>
+18:22:02.236 [http-nio-40001-exec-3] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-41264f15d459c1d265c7f824a983a124:InResponseTo=SP-7586c6e6cc0f071161d863bec8097409:TIME=2025-08-20T09:22:02.081Z:ISSUER=TEST_IDP:STATUS=Success>
+18:22:03.988 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+18:22:03.988 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+18:22:03.989 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+18:22:27.812 [http-nio-40001-exec-1] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-9f1909a89d753ba7c31e991d2e5d0d1b:TIME=2025-08-20T09:22:26.818Z:ISSUER=TEST_SP2:PROVIDER=TEST_SP2:DEST=idp.dev.com:40001:CONSUMER=sp2.dev.com:40007:USER=__EMPTY_ID:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+18:25:06.374 [Catalina-utility-1] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+18:25:06.389 [Catalina-utility-1] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+18:25:06.392 [Catalina-utility-1] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+18:25:06.393 [Catalina-utility-1] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+18:25:06.394 [Catalina-utility-1] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+18:25:06.399 [Catalina-utility-1] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+18:25:06.429 [Catalina-utility-1] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+18:25:06.439 [Catalina-utility-1] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+18:25:15.516 [Catalina-utility-1] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+18:25:16.476 [Catalina-utility-1] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 952 ms.]
+18:25:16.476 [Thread-5] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+18:25:16.476 [Catalina-utility-1] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+18:25:16.815 [Catalina-utility-1] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+18:25:17.502 [Catalina-utility-1] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+18:25:17.515 [Catalina-utility-1] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+18:27:14.059 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+18:27:14.073 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+18:27:14.075 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+18:27:14.077 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+18:27:14.078 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+18:27:14.079 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+18:27:14.118 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+18:27:14.132 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+18:27:19.501 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+18:27:20.832 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 1324 ms.]
+18:27:20.832 [Thread-2] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+18:27:20.833 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+18:27:21.459 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+18:27:21.652 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+18:27:21.656 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+18:27:37.140 [http-nio-40001-exec-1] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-6e911b6bb662910b302a9daa308ab9ec:TIME=2025-08-20T09:27:36.471Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+18:27:40.320 [http-nio-40001-exec-1] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:27:40.320 [http-nio-40001-exec-1] ERROR c.d.s.s.a.user.service.UserService - ### decryptUserInfo() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:27:40.693 [http-nio-40001-exec-1] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-880234a76620380accbaf74412325adc:InResponseTo=SP-6e911b6bb662910b302a9daa308ab9ec:TIME=2025-08-20T09:27:40.508Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T09:27:40.508Z:NOT_AFTER=2025-08-21T09:27:40.508Z:AUTHN_CONTEXT=Password>
+18:27:40.751 [http-nio-40001-exec-1] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-880234a76620380accbaf74412325adc:InResponseTo=SP-6e911b6bb662910b302a9daa308ab9ec:TIME=2025-08-20T09:27:40.508Z:ISSUER=TEST_IDP:STATUS=Success>
+18:27:42.433 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+18:27:42.434 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+18:27:42.434 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+18:27:45.970 [http-nio-40001-exec-5] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-fdf90e00f6b21acf2a9abd1b0af5b420:TIME=2025-08-20T09:27:45.522Z:ISSUER=TEST_SP2:PROVIDER=TEST_SP2:DEST=idp.dev.com:40001:CONSUMER=sp2.dev.com:40007:USER=__EMPTY_ID:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+18:32:23.161 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Connect Test Start ...
+18:32:23.177 [Thread-2] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Status is Good [ 14 ms.]
+18:32:23.249 [Thread-2] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:32:23.250 [Thread-2] ERROR c.d.s.s.r.c.DBConnectMonitor - ### checkAudit() Exception : com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:39:15.775 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+18:39:15.791 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+18:39:15.792 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+18:39:15.793 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+18:39:15.794 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+18:39:15.795 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+18:39:15.829 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+18:39:15.846 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+18:39:21.464 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+18:39:22.796 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 1325 ms.]
+18:39:22.796 [Thread-1] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+18:39:22.797 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+18:39:23.357 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+18:39:23.546 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+18:39:23.549 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+18:39:41.723 [http-nio-40001-exec-9] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-aca693c9b53459e2859ae0fe2f56fe37:TIME=2025-08-20T09:39:38.077Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+18:39:42.293 [http-nio-40001-exec-9] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:39:42.293 [http-nio-40001-exec-9] ERROR c.d.s.s.a.user.service.UserService - ### decryptUserInfo() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:39:42.629 [http-nio-40001-exec-9] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-7065b0c420bbc72eeb49e33b9be7e01b:InResponseTo=SP-aca693c9b53459e2859ae0fe2f56fe37:TIME=2025-08-20T09:39:42.459Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T09:39:42.459Z:NOT_AFTER=2025-08-21T09:39:42.459Z:AUTHN_CONTEXT=Password>
+18:39:43.076 [http-nio-40001-exec-9] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-7065b0c420bbc72eeb49e33b9be7e01b:InResponseTo=SP-aca693c9b53459e2859ae0fe2f56fe37:TIME=2025-08-20T09:39:42.459Z:ISSUER=TEST_IDP:STATUS=Success>
+18:39:44.385 [Thread-3] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+18:39:44.385 [Thread-3] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+18:39:44.385 [Thread-3] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+18:39:50.897 [http-nio-40001-exec-4] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-606106848b237ab0193748219508b1bd:TIME=2025-08-20T09:39:50.359Z:ISSUER=TEST_SP2:PROVIDER=TEST_SP2:DEST=idp.dev.com:40001:CONSUMER=sp2.dev.com:40007:USER=__EMPTY_ID:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+18:39:50.937 [http-nio-40001-exec-4] INFO  c.d.s.s.p.IdentificationProvider - ### AuthSession Compare Result: True (connect)
+18:39:51.122 [http-nio-40001-exec-4] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-35619893f8b4bc9a44ac66a077c7807f:InResponseTo=SP-606106848b237ab0193748219508b1bd:TIME=2025-08-20T09:39:51.077Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T09:39:51.077Z:NOT_AFTER=2025-08-21T09:39:51.077Z:AUTHN_CONTEXT=Password>
+18:39:51.143 [http-nio-40001-exec-4] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-35619893f8b4bc9a44ac66a077c7807f:InResponseTo=SP-606106848b237ab0193748219508b1bd:TIME=2025-08-20T09:39:51.077Z:ISSUER=TEST_IDP:STATUS=Success>
+18:43:29.828 [http-nio-40001-exec-5] ERROR c.d.s.s.controller.OidcController - ### oidcAuth: 9003, checkValidParamsAuth() invalid_client not found clientModel
+18:43:43.690 [http-nio-40001-exec-8] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:43:43.691 [http-nio-40001-exec-8] ERROR c.d.s.s.a.a.service.AdminService - ### decryptAdminInfo() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:44:25.327 [Thread-1] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Connect Test Start ...
+18:44:25.331 [Thread-1] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Status is Good [ 4 ms.]
+18:44:25.388 [Thread-1] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:44:25.388 [Thread-1] ERROR c.d.s.s.r.c.DBConnectMonitor - ### checkAudit() Exception : com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:45:43.425 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+18:45:43.438 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+18:45:43.439 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+18:45:43.441 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+18:45:43.442 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+18:45:43.443 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+18:45:43.475 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+18:45:43.489 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+18:45:48.818 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+18:45:50.315 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 1487 ms.]
+18:45:50.315 [Thread-1] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+18:45:50.315 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+18:45:50.885 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+18:45:51.069 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+18:45:51.073 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+18:45:51.462 [http-nio-40001-exec-3] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:45:51.462 [http-nio-40001-exec-3] ERROR c.d.s.s.a.a.service.AdminService - ### decryptAdminIP() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:46:13.133 [http-nio-40001-exec-2] ERROR c.d.sso.server.crypto.SSOCryptoApi - ### SSOCryptoApi.decryptByDEK() Exception: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:46:13.133 [http-nio-40001-exec-2] ERROR c.d.s.s.a.a.service.AdminService - ### decryptAdminIP() Exception: com.dreamsecurity.sso.server.exception.SSOException: com.dreamsecurity.sso.server.crypto.CryptoApiException: com.dreamsecurity.sso.server.crypto.CryptoApiException: javax.crypto.BadPaddingException: 패딩이 올바르지 않습니다(pad block corrupted).
+18:47:47.401 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료 112일 전
+18:47:47.411 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP1 임시 라이센스 만료 112일 전
+18:47:47.413 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP2 임시 라이센스 만료 112일 전
+18:47:47.414 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3 임시 라이센스 만료 112일 전
+18:47:47.415 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP3_S 임시 라이센스 만료 112일 전
+18:47:47.416 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_SP4 임시 라이센스 만료 112일 전
+18:47:47.447 [main] DEBUG c.d.s.s.crypto.CryptoApiFactory - ### CryptoAPI class : com.dreamsecurity.sso.server.crypto.api.JCAOSCryptoApi
+18:47:47.460 [main] DEBUG c.d.s.s.crypto.api.JCAOSCryptoApi - ### Crypto Initialization
+18:47:51.799 [main] DEBUG c.d.s.s.r.RepositoryApiFactory - ### RepositoryAPI class : com.dreamsecurity.sso.server.repository.api.DefaultRepositoryApi
+18:47:53.081 [main] DEBUG c.d.s.s.r.connection.DBConnectMap - ### default_db's Connection Pool Create Success [ 1273 ms.]
+18:47:53.081 [Thread-1] DEBUG c.d.s.s.r.c.DBConnectMonitor - ### default_db Monitor Start ...
+18:47:53.081 [main] INFO  c.d.s.s.r.connection.DBConnectMap - ### DBConnectMap size : 1
+18:47:53.602 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### MagicJCrypto Self Test ... OK
+18:47:53.784 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Self Test ... OK
+18:47:53.787 [main] INFO  c.d.sso.server.crypto.SSOCryptoApi - ### Magic SSO Process ... OK
+18:52:55.462 [Thread-1] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Connect Test Start ...
+18:52:55.466 [Thread-1] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Status is Good [ 3 ms.]
+18:54:31.586 [http-nio-40001-exec-1] ERROR c.d.s.s.controller.OidcController - ### oidcAuth: 9007, checkValidParamsAuth() invalid_grant invalid redirect_uri
+18:56:07.046 [Thread-3] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+18:56:07.047 [Thread-3] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+18:56:07.047 [Thread-3] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+18:57:57.986 [Thread-1] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Connect Test Start ...
+18:57:57.988 [Thread-1] INFO  c.d.s.s.r.c.DBConnectMonitor - ### default_db Status is Good [ 2 ms.]
+19:00:15.712 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+19:00:15.712 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+19:00:15.712 [Thread-4] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+19:00:29.680 [http-nio-40001-exec-9] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-49a934b4c592822a5e42ff59608563d0:TIME=2025-08-20T10:00:29.076Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=__EMPTY_ID:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+19:00:29.771 [http-nio-40001-exec-9] INFO  c.d.s.s.p.IdentificationProvider - ### AuthSession Compare Result: True (connect)
+19:00:30.015 [http-nio-40001-exec-9] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-e54c347eff53e5c42698fc75cd428af6:InResponseTo=SP-49a934b4c592822a5e42ff59608563d0:TIME=2025-08-20T10:00:29.891Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T10:00:29.891Z:NOT_AFTER=2025-08-21T10:00:29.891Z:AUTHN_CONTEXT=Password>
+19:00:30.054 [http-nio-40001-exec-9] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-e54c347eff53e5c42698fc75cd428af6:InResponseTo=SP-49a934b4c592822a5e42ff59608563d0:TIME=2025-08-20T10:00:29.891Z:ISSUER=TEST_IDP:STATUS=Success>
+19:00:52.677 [http-nio-40001-exec-7] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-19f48db02e3048f973031e6a9bc2fcd6:TIME=2025-08-20T10:00:52.377Z:ISSUER=TEST_SP1:PROVIDER=TEST_SP1:DEST=idp.dev.com:40001:CONSUMER=sp1.dev.com:40004:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+19:00:52.793 [http-nio-40001-exec-7] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-54dafd3e849e467fe242af71da9bc3a2:InResponseTo=SP-19f48db02e3048f973031e6a9bc2fcd6:TIME=2025-08-20T10:00:52.766Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T10:00:52.766Z:NOT_AFTER=2025-08-21T10:00:52.766Z:AUTHN_CONTEXT=Password>
+19:00:52.805 [http-nio-40001-exec-7] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-54dafd3e849e467fe242af71da9bc3a2:InResponseTo=SP-19f48db02e3048f973031e6a9bc2fcd6:TIME=2025-08-20T10:00:52.766Z:ISSUER=TEST_IDP:STATUS=Success>
+19:00:54.733 [Thread-5] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+19:00:54.733 [Thread-5] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+19:00:54.734 [Thread-5] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+19:01:38.463 [Thread-6] ERROR c.d.sso.server.dup.DupManager - ### connect info: 127.0.0.1, 40040, 3000, 512
+19:01:38.463 [Thread-6] ERROR c.d.sso.server.dup.DupManager - ### connect error: java.net.ConnectException: Connection refused: connect
+19:01:38.463 [Thread-6] ERROR c.d.sso.server.dup.DupManager - ### DupManager.doprocess() Exception: java.io.IOException: server connect failed
+19:01:47.895 [http-nio-40001-exec-9] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_AUTHN_REQUEST:ID=SP-4507054aa2eeabf7ac8f75ac89eb10cc:TIME=2025-08-20T10:01:47.267Z:ISSUER=TEST_SP2:PROVIDER=TEST_SP2:DEST=idp.dev.com:40001:CONSUMER=sp2.dev.com:40007:USER=__EMPTY_ID:USER_FORMAT=entity:SUBJECT_METHOD=sender-vouches:AUTHN_CONTEXT=Password>
+19:01:47.924 [http-nio-40001-exec-9] INFO  c.d.s.s.p.IdentificationProvider - ### AuthSession Compare Result: True (connect)
+19:01:48.046 [http-nio-40001-exec-9] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_ASSERTION:ID=IDP-8f2129264e9b403f5fdf6906d5f12b51:InResponseTo=SP-4507054aa2eeabf7ac8f75ac89eb10cc:TIME=2025-08-20T10:01:48.012Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-19T10:01:48.012Z:NOT_AFTER=2025-08-21T10:01:48.012Z:AUTHN_CONTEXT=Password>
+19:01:48.059 [http-nio-40001-exec-9] DEBUG c.d.s.s.p.IdentificationProvider - ### <SAML_SAML_RESPONSE:ID=IDP-8f2129264e9b403f5fdf6906d5f12b51:InResponseTo=SP-4507054aa2eeabf7ac8f75ac89eb10cc:TIME=2025-08-20T10:01:48.012Z:ISSUER=TEST_IDP:STATUS=Success>

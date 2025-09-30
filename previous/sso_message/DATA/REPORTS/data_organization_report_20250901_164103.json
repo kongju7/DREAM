@@ -1,0 +1,67 @@
+{
+  "timestamp": "2025-09-01T16:41:03.991430",
+  "summary": {
+    "total_files_processed": 38,
+    "successfully_moved": 38,
+    "failed_moves": 0,
+    "backed_up": 0
+  },
+  "file_distribution": {
+    "flow_analysis": 3,
+    "anomaly_detection": {
+      "isolation_forest": 4,
+      "lof": 4,
+      "one_class_svm": 4,
+      "random_cut_forest": 4
+    },
+    "feature_importance": {
+      "isolation_forest": 0,
+      "lof": 0,
+      "one_class_svm": 0,
+      "random_cut_forest": 0
+    },
+    "reports": 0,
+    "unclassified": 19
+  },
+  "moved_files": [
+    "sso_analysis_result.json → FLOW_ANALYSIS/",
+    "sso_flow_analysis.png → FLOW_ANALYSIS/",
+    "sso_transactions.csv → FLOW_ANALYSIS/",
+    "sso_anomaly_iforest_analysis.png → ANOMALY_DETECTION/isolation_forest/",
+    "sso_anomaly_iforest_summary.json → ANOMALY_DETECTION/isolation_forest/",
+    "sso_anomaly_iforest_results.csv → ANOMALY_DETECTION/isolation_forest/",
+    "sso_anomaly_iforest_detected.csv → ANOMALY_DETECTION/isolation_forest/",
+    "sso_anomaly_lof_results.csv → ANOMALY_DETECTION/lof/",
+    "sso_anomaly_lof_detected.csv → ANOMALY_DETECTION/lof/",
+    "sso_anomaly_lof_summary.json → ANOMALY_DETECTION/lof/",
+    "sso_anomaly_lof_analysis.png → ANOMALY_DETECTION/lof/",
+    "sso_anomaly_ocsvm_summary.json → ANOMALY_DETECTION/one_class_svm/",
+    "sso_anomaly_ocsvm_detected.csv → ANOMALY_DETECTION/one_class_svm/",
+    "sso_anomaly_ocsvm_analysis.png → ANOMALY_DETECTION/one_class_svm/",
+    "sso_anomaly_ocsvm_results.csv → ANOMALY_DETECTION/one_class_svm/",
+    "sso_anomaly_rcf_detected.csv → ANOMALY_DETECTION/random_cut_forest/",
+    "sso_anomaly_rcf_summary.json → ANOMALY_DETECTION/random_cut_forest/",
+    "sso_anomaly_rcf_analysis.png → ANOMALY_DETECTION/random_cut_forest/",
+    "sso_anomaly_rcf_results.csv → ANOMALY_DETECTION/random_cut_forest/",
+    "feature_importance_iforest_results.json → ARCHIVE/ (미분류)",
+    "feature_importance_ocsvm_path.csv → ARCHIVE/ (미분류)",
+    "feature_importance_lof_statistical.csv → ARCHIVE/ (미분류)",
+    "feature_importance_lof_distributions.png → ARCHIVE/ (미분류)",
+    "feature_importance_lof_results.json → ARCHIVE/ (미분류)",
+    "feature_importance_iforest_analysis.png → ARCHIVE/ (미분류)",
+    "log_formatter.log → ARCHIVE/ (미분류)",
+    "feature_importance_ocsvm_statistical.csv → ARCHIVE/ (미분류)",
+    "feature_importance_iforest_statistical.csv → ARCHIVE/ (미분류)",
+    "feature_importance_ocsvm_permutation.csv → ARCHIVE/ (미분류)",
+    "log_conversion_report_20250901_163540.txt → ARCHIVE/ (미분류)",
+    "feature_importance_iforest_distributions.png → ARCHIVE/ (미분류)",
+    "feature_importance_ocsvm_analysis.png → ARCHIVE/ (미분류)",
+    "feature_importance_iforest_permutation.csv → ARCHIVE/ (미분류)",
+    "feature_importance_ocsvm_distributions.png → ARCHIVE/ (미분류)",
+    "feature_importance_iforest_path.csv → ARCHIVE/ (미분류)",
+    "feature_importance_lof_path.csv → ARCHIVE/ (미분류)",
+    "feature_importance_lof_analysis.png → ARCHIVE/ (미분류)",
+    "feature_importance_ocsvm_results.json → ARCHIVE/ (미분류)"
+  ],
+  "failed_files": []
+}

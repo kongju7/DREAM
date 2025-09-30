@@ -1,0 +1,335 @@
+{
+  "statistical_importance": [
+    {
+      "feature": "sp_nan",
+      "importance": 562893132.2969677,
+      "mean_diff": 1.2911799231206054,
+      "std_ratio": 316273197.7771495,
+      "cohens_d": 1.3784048604938
+    },
+    {
+      "feature": "request_id_length",
+      "importance": 562893130.7196741,
+      "mean_diff": 1.291179923120605,
+      "std_ratio": 316273196.8909145,
+      "cohens_d": 1.3784048604937995
+    },
+    {
+      "feature": "is_success",
+      "importance": 8.743622878125876,
+      "mean_diff": 1.9065879802295411,
+      "std_ratio": 2.7941055842002386e-16,
+      "cohens_d": 2.2930027275933003
+    },
+    {
+      "feature": "response_id_length",
+      "importance": 8.743622878125876,
+      "mean_diff": 1.9065879802295407,
+      "std_ratio": 0.0,
+      "cohens_d": 2.2930027275933003
+    },
+    {
+      "feature": "sp_TEST_SP1",
+      "importance": 5.381349727708925,
+      "mean_diff": 1.5545097407214483,
+      "std_ratio": 0.0,
+      "cohens_d": 1.7308832446464568
+    },
+    {
+      "feature": "duration_z_score",
+      "importance": 2.990901629544002,
+      "mean_diff": 1.5707519761416282,
+      "std_ratio": 1.0854666796230075,
+      "cohens_d": 1.754195602891878
+    },
+    {
+      "feature": "transaction_duration_filled",
+      "importance": 2.95791735160854,
+      "mean_diff": 1.565628078159962,
+      "std_ratio": 1.0815574451848469,
+      "cohens_d": 1.7468187398462935
+    },
+    {
+      "feature": "is_complete",
+      "importance": 2.9199510668767457,
+      "mean_diff": 1.5596856349689587,
+      "std_ratio": 1.0770016870445158,
+      "cohens_d": 1.7382895433994023
+    },
+    {
+      "feature": "sp_TEST_SP2",
+      "importance": 1.698561729692848,
+      "mean_diff": 1.2181385023466689,
+      "std_ratio": 0.9172076229550675,
+      "cohens_d": 1.2877734729369883
+    },
+    {
+      "feature": "is_business_hours",
+      "importance": 0.6997454242175959,
+      "mean_diff": 0.5917917443622737,
+      "std_ratio": 0.0,
+      "cohens_d": 0.5912091803271565
+    },
+    {
+      "feature": "hour",
+      "importance": 0.49036779250795204,
+      "mean_diff": 0.6375994528842295,
+      "std_ratio": 0.7958054325763512,
+      "cohens_d": 0.6386712085939362
+    },
+    {
+      "feature": "time_since_last",
+      "importance": 0.07563500227976991,
+      "mean_diff": 0.19754210668050265,
+      "std_ratio": 0.031585470268152595,
+      "cohens_d": 0.1945120814711165
+    },
+    {
+      "feature": "minute",
+      "importance": 0.01811210325766453,
+      "mean_diff": 0.12774674330730032,
+      "std_ratio": 1.1283239999297905,
+      "cohens_d": 0.12565657621455703
+    },
+    {
+      "feature": "hourly_transaction_count",
+      "importance": 0.016567713102371366,
+      "mean_diff": 0.10495045085065734,
+      "std_ratio": 1.5295508624047398,
+      "cohens_d": 0.10320823084436008
+    },
+    {
+      "feature": "day_of_week",
+      "importance": 0.0006037317123081539,
+      "mean_diff": 0.015909459942465388,
+      "std_ratio": 2.4267032679149216,
+      "cohens_d": 0.01563766395916829
+    },
+    {
+      "feature": "is_weekend",
+      "importance": 0.0,
+      "mean_diff": 0.0,
+      "std_ratio": 0.0,
+      "cohens_d": 0.0
+    },
+    {
+      "feature": "sp_provider",
+      "importance": 0.0,
+      "mean_diff": 0.0,
+      "std_ratio": 0.0,
+      "cohens_d": 0.0
+    }
+  ],
+  "path_importance": [
+    {
+      "feature": "hourly_transaction_count",
+      "contribution": 0.06497175141242936,
+      "extreme_anomaly_rate": 0.16666666666666666,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "time_since_last",
+      "contribution": 0.06497175141242936,
+      "extreme_anomaly_rate": 0.16666666666666666,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "minute",
+      "contribution": 0.05215123859191656,
+      "extreme_anomaly_rate": 0.15384615384615385,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "request_id_length",
+      "contribution": 0.0,
+      "extreme_anomaly_rate": 0.1016949152542373,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "sp_TEST_SP2",
+      "contribution": 0.0,
+      "extreme_anomaly_rate": 0.1016949152542373,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "sp_TEST_SP1",
+      "contribution": 0.0,
+      "extreme_anomaly_rate": 0.1016949152542373,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "sp_provider",
+      "contribution": 0.0,
+      "extreme_anomaly_rate": 0.1016949152542373,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "response_id_length",
+      "contribution": 0.0,
+      "extreme_anomaly_rate": 0.1016949152542373,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "sp_nan",
+      "contribution": 0.0,
+      "extreme_anomaly_rate": 0.1016949152542373,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "is_success",
+      "contribution": 0.0,
+      "extreme_anomaly_rate": 0.1016949152542373,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "is_complete",
+      "contribution": 0.0,
+      "extreme_anomaly_rate": 0.1016949152542373,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "is_business_hours",
+      "contribution": 0.0,
+      "extreme_anomaly_rate": 0.1016949152542373,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "is_weekend",
+      "contribution": 0.0,
+      "extreme_anomaly_rate": 0.1016949152542373,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "day_of_week",
+      "contribution": 0.0,
+      "extreme_anomaly_rate": 0.1016949152542373,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "transaction_duration_filled",
+      "contribution": -0.023263542705217688,
+      "extreme_anomaly_rate": 0.0784313725490196,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "duration_z_score",
+      "contribution": -0.023263542705217688,
+      "extreme_anomaly_rate": 0.0784313725490196,
+      "overall_anomaly_rate": 0.1016949152542373
+    },
+    {
+      "feature": "hour",
+      "contribution": -0.05169491525423729,
+      "extreme_anomaly_rate": 0.05,
+      "overall_anomaly_rate": 0.1016949152542373
+    }
+  ],
+  "analysis_summary": {
+    "total_features": 17,
+    "total_transactions": 59,
+    "anomaly_count": 6,
+    "anomaly_rate": 0.1016949152542373,
+    "top_3_statistical": [
+      "sp_nan",
+      "request_id_length",
+      "is_success"
+    ],
+    "top_3_path": [
+      "hourly_transaction_count",
+      "time_since_last",
+      "minute"
+    ],
+    "top_3_permutation": [
+      "transaction_duration_filled",
+      "sp_TEST_SP2",
+      "sp_TEST_SP1"
+    ]
+  },
+  "permutation_importance": [
+    {
+      "feature": "transaction_duration_filled",
+      "importance_mean": 0.0016410474494097604,
+      "importance_std": 0.00021184623126609906
+    },
+    {
+      "feature": "sp_TEST_SP2",
+      "importance_mean": 0.0015848183073969846,
+      "importance_std": 0.0002064869217811573
+    },
+    {
+      "feature": "sp_TEST_SP1",
+      "importance_mean": 0.0014244424873291806,
+      "importance_std": 0.0002424282628082467
+    },
+    {
+      "feature": "duration_z_score",
+      "importance_mean": 0.0013738321879413595,
+      "importance_std": 0.00017874939189919842
+    },
+    {
+      "feature": "is_complete",
+      "importance_mean": 0.0009370956311129053,
+      "importance_std": 0.00028798839151753436
+    },
+    {
+      "feature": "hourly_transaction_count",
+      "importance_mean": 0.0007068604627290309,
+      "importance_std": 0.00019390699305583647
+    },
+    {
+      "feature": "day_of_week",
+      "importance_mean": 0.0005189661181046912,
+      "importance_std": 0.00014736638568406326
+    },
+    {
+      "feature": "minute",
+      "importance_mean": 0.0003891869075702825,
+      "importance_std": 0.00010649941976281638
+    },
+    {
+      "feature": "is_success",
+      "importance_mean": 0.00024230273208381004,
+      "importance_std": 6.824009363857199e-05
+    },
+    {
+      "feature": "hour",
+      "importance_mean": 0.00020632815804841887,
+      "importance_std": 0.0003340500409101939
+    },
+    {
+      "feature": "response_id_length",
+      "importance_mean": 8.478085139327352e-05,
+      "importance_std": 5.1794426059668814e-05
+    },
+    {
+      "feature": "time_since_last",
+      "importance_mean": 1.2851844332573136e-05,
+      "importance_std": 0.00015670138483800088
+    },
+    {
+      "feature": "is_weekend",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "sp_provider",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "request_id_length",
+      "importance_mean": -0.0001365085206014971,
+      "importance_std": 3.095008593380748e-05
+    },
+    {
+      "feature": "sp_nan",
+      "importance_mean": -0.00016971495301156824,
+      "importance_std": 7.136977526807432e-05
+    },
+    {
+      "feature": "is_business_hours",
+      "importance_mean": -0.00021071497339626434,
+      "importance_std": 6.617018636697255e-05
+    }
+  ]
+}

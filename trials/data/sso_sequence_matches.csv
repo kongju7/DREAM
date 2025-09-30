@@ -1,0 +1,83 @@
+sp_id,sequence_status,idp_ts,idp_issue_instant,idp_provider,idp_acs,idp_error,idp_file,idp_line,sp_ts,sp_issue_instant,sp_provider,sp_acs,sp_status,assertion_verify,sp_agent,sp_file,sp_line
+SP-893f8dd2ccedcf213737f322915ae47c,IDP ERROR: License Error (unmatched),2025-08-21T05:15:23,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,License Error,idp__ssoserver.log,17.0,,,,,,,,,
+SP-5040f09b9329247726752be676097de8,IDP ERROR: License Error (unmatched),2025-08-21T05:19:32,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,License Error,idp__ssoserver.log,97.0,,,,,,,,,
+SP-225d5f55759f4966714d6e450df30f3c,IdP-only (no SP Response),2025-08-20T08:20:43,,TEST_SP2,http://sp2.dev.com:40007/saml/response,,idp_log__ssoserver_20250820.log,50.0,,,,,,,,,
+SP-1d58563fa48a4937684b41f4e75b4d5f,IdP-only (no SP Response),2025-08-20T08:21:20,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,201.0,,,,,,,,,
+SP-3ae11e0ecae00b64e3774f00cf4e4bd7,IdP-only (no SP Response),2025-08-20T08:22:42,,TEST_SP2,http://sp2.dev.com:40007/saml/response,,idp_log__ssoserver_20250820.log,279.0,,,,,,,,,
+SP-75049b8a2469b6567e868e1afe4bde11,IdP-only (no SP Response),2025-08-20T08:23:17,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,430.0,,,,,,,,,
+SP-9d8dada5d75b4fb387df0edca8540394,IdP-only (no SP Response),2025-08-20T08:23:46,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,491.0,,,,,,,,,
+SP-f2e42ba5b3a1ca6509f8fd50d9571a93,IdP-only (no SP Response),2025-08-20T08:23:48,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,552.0,,,,,,,,,
+SP-8c30a0d40ba12afad29f2467e4f33017,IdP-only (no SP Response),2025-08-20T08:25:02,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,613.0,,,,,,,,,
+SP-19f27abe88f7f7a83cc3f1ef8a400929,IdP-only (no SP Response),2025-08-20T08:30:05,,TEST_SP2,http://sp2.dev.com:40007/saml/response,,idp_log__ssoserver_20250820.log,712.0,,,,,,,,,
+SP-6f8f9bb436603d6bb17ca49f2bb41581,IdP-only (no SP Response),2025-08-20T08:30:37,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,863.0,,,,,,,,,
+SP-f33619d456372fe3476429e871facf96,IdP-only (no SP Response),2025-08-20T08:34:42,,TEST_SP2,http://sp2.dev.com:40007/saml/response,,idp_log__ssoserver_20250820.log,941.0,,,,,,,,,
+SP-c7cf457ec607483af4bdd558c5e553b5,IdP-only (no SP Response),2025-08-20T08:35:00,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,1092.0,,,,,,,,,
+SP-ef01c8fa4e23fcc9588f0d8379c98ac9,IdP-only (no SP Response),2025-08-20T08:49:34,,TEST_SP2,http://sp2.dev.com:40007/saml/response,,idp_log__ssoserver_20250820.log,1190.0,,,,,,,,,
+SP-ad798f1c86898f63066e382c59191c6f,IdP-only (no SP Response),2025-08-20T08:49:57,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,1341.0,,,,,,,,,
+SP-58b47af8095b0539340dd98c439da3ed,IdP-only (no SP Response),2025-08-20T09:08:12,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,1429.0,,,,,,,,,
+SP-38390a4474503819579f7e4152017cec,IdP-only (no SP Response),2025-08-20T09:08:55,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,1580.0,,,,,,,,,
+SP-bfa8458fac00d6111ad6e46c6a66ff6b,IdP-only (no SP Response),2025-08-20T09:09:56,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,1746.0,,,,,,,,,
+SP-9a11021a88b0a801efd687a8c88a2ffc,IdP-only (no SP Response),2025-08-20T09:10:26,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,1897.0,,,,,,,,,
+SP-7586c6e6cc0f071161d863bec8097409,IdP-only (no SP Response),2025-08-20T09:21:58,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,2071.0,,,,,,,SP,sp_log__ssoagent_20250820.log,171.0
+SP-9f1909a89d753ba7c31e991d2e5d0d1b,IdP-only (no SP Response),2025-08-20T09:22:26,,TEST_SP2,http://sp2.dev.com:40007/saml/response,,idp_log__ssoserver_20250820.log,2222.0,,,,,,,,,
+SP-6e911b6bb662910b302a9daa308ab9ec,IdP-only (no SP Response),2025-08-20T09:27:36,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,2313.0,,,,,,,SP,sp_log__ssoagent_20250820.log,258.0
+SP-fdf90e00f6b21acf2a9abd1b0af5b420,IdP-only (no SP Response),2025-08-20T09:27:45,,TEST_SP2,http://sp2.dev.com:40007/saml/response,,idp_log__ssoserver_20250820.log,2464.0,,,,,,,,,
+SP-aca693c9b53459e2859ae0fe2f56fe37,IdP-only (no SP Response),2025-08-20T09:39:38,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,2544.0,,,,,,,SP,sp_log__ssoagent_20250820.log,345.0
+SP-606106848b237ab0193748219508b1bd,IdP-only (no SP Response),2025-08-20T09:39:50,,TEST_SP2,http://sp2.dev.com:40007/saml/response,,idp_log__ssoserver_20250820.log,2695.0,,,,,,,,,
+SP-49a934b4c592822a5e42ff59608563d0,IdP-only (no SP Response),2025-08-20T10:00:29,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,2895.0,,,,,,,SP,sp_log__ssoagent_20250820.log,462.0
+SP-19f48db02e3048f973031e6a9bc2fcd6,IdP-only (no SP Response),2025-08-20T10:00:52,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,3043.0,,,,,,,SP,sp_log__ssoagent_20250820.log,549.0
+SP-4507054aa2eeabf7ac8f75ac89eb10cc,IdP-only (no SP Response),2025-08-20T10:01:47,,TEST_SP2,http://sp2.dev.com:40007/saml/response,,idp_log__ssoserver_20250820.log,3195.0,,,,,,,,,
+SP-1ed80dfdedc3bd898c60a9460999240b,IdP-only (no SP Response),2025-08-21T00:01:13,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver.log,18.0,,,,,,,SP,sp_log__ssoagent_20250821.log,77.0
+SP-edd8e978a971dca4f7e32f9d81d38a85,IdP-only (no SP Response),2025-08-21T00:01:20,,TEST_SP2,http://sp2.dev.com:40007/saml/response,,idp_log__ssoserver.log,167.0,,,,,,,,,
+SP-60cb5c6896a1447a6426ef1d2c292a5b,IdP-only (no SP Response),2025-08-21T00:01:34,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver.log,315.0,,,,,,,SP,sp_log__ssoagent_20250821.log,164.0
+SP-c195f4fd743f5e0680b8c64c732ee656,IdP-only (no SP Response),2025-08-21T00:02:40,,TEST_SP2,http://sp2.dev.com:40007/saml/response,,idp_log__ssoserver.log,470.0,,,,,,,,,
+SP-129277b43cfe3397c62c9e2e9235afa4,IdP-only (no SP Response),2025-08-21T00:13:19,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver.log,635.0,,,,,,,,,
+SP-50b60ece6f5074e15343af77b3aa2133,IdP-only (no SP Response),2025-08-21T00:18:17,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver.log,716.0,,,,,,,SP,sp_log__ssoagent_20250821.log,263.0
+SP-f394257672cf7065cbf7b24ec93317f1,IdP-only (no SP Response),2025-08-21T05:23:51,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,173.0,,,,,,,SP1,sp1__ssoagent_20250821.log,77.0
+SP-0e1731686656235ffcaf004f4f8e8447,IdP-only (no SP Response),2025-08-21T05:24:54,,TEST_SP2,,,idp__ssoserver.log,322.0,,,,,,,SP2,sp2__ssoagent_20250821.log,78.0
+SP-9da58e35804d3ff6f9cbc8237e2edae5,IdP-only (no SP Response),2025-08-21T05:25:19,,TEST_SP2,,,idp__ssoserver.log,470.0,,,,,,,SP2,sp2__ssoagent_20250821.log,166.0
+SP-0ab985aaeeff96aac8b284bd5abfc189,IdP-only (no SP Response),2025-08-21T05:30:17,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,634.0,,,,,,,SP1,sp1__ssoagent_20250821.log,164.0
+SP-bfeeb16c6db79e9daa66d7a4587ea970,IdP-only (no SP Response),2025-08-21T05:30:28,,TEST_SP2,,,idp__ssoserver.log,783.0,,,,,,,SP2,sp2__ssoagent_20250821.log,260.0
+SP-e4a0a4e628cb96d675f9029ecb8cd8be,IdP-only (no SP Response),2025-08-21T05:30:51,,TEST_SP2,,,idp__ssoserver.log,931.0,,,,,,,SP2,sp2__ssoagent_20250821.log,348.0
+SP-1e41378d03a4535e3ccb7246e921a5c5,IdP-only (no SP Response),2025-08-21T05:30:57,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,1080.0,,,,,,,SP1,sp1__ssoagent_20250821.log,251.0
+SP-173a23dfdef565c5e4f76b0ba828e373,IdP-only (no SP Response),2025-08-21T05:31:25,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,1228.0,,,,,,,,,
+SP-95540b1f02f4081c4e3b961d41654fd1,IdP-only (no SP Response),2025-08-21T05:31:32,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,1291.0,,,,,,,,,
+SP-5054fdfe73b8ad830b5987dc4723cca8,IdP-only (no SP Response),2025-08-21T05:31:39,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,1354.0,,,,,,,,,
+SP-3518091208b209644dfcb666717f018f,IdP-only (no SP Response),2025-08-21T05:31:55,,TEST_SP2,,,idp__ssoserver.log,1417.0,,,,,,,,,
+SP-3bb70a77609619e77901b6d33d256378,IdP-only (no SP Response),2025-08-21T05:32:02,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,1480.0,,,,,,,,,
+SP-6cfccadd55898ed5627a0b7008f2cb61,IdP-only (no SP Response),2025-08-21T05:32:06,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,1543.0,,,,,,,,,
+SP-cf0a10d69c4705b20b88b541c30eeb1d,IdP-only (no SP Response),2025-08-21T05:40:44,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,1694.0,,,,,,,,,
+SP-af9030861636f96df8a0cefbebbe57ab,IdP-only (no SP Response),2025-08-21T05:41:02,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,1757.0,,,,,,,,,
+SP-1a257e1dc1117a7c3bddc30ec1eac45d,IdP-only (no SP Response),2025-08-21T05:41:12,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,1820.0,,,,,,,,,
+SP-a06541d7f8c19429f75b1aed74f61894,IdP-only (no SP Response),2025-08-21T05:41:23,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,1883.0,,,,,,,SP1,sp1__ssoagent_20250821.log,344.0
+SP-f674930027ba59048d1dd40efb24b0c4,IdP-only (no SP Response),2025-08-21T05:44:18,,TEST_SP2,,,idp__ssoserver.log,2085.0,,,,,,,SP2,sp2__ssoagent_20250821.log,437.0
+SP-cc584cf371bfd1669775b118929d9c28,IdP-only (no SP Response),2025-08-21T06:20:48,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,62270.0,,,,,,,,,
+SP-bbf16050236aac13bac38335e2715f6c,IdP-only (no SP Response),2025-08-21T06:21:15,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,62333.0,,,,,,,SP1,sp1__ssoagent_20250821.log,431.0
+SP-5a5c9264fd8fa6d4aeaa9e2315b4b2b7,IdP-only (no SP Response),2025-08-21T06:21:59,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,62503.0,,,,,,,SP1,sp1__ssoagent_20250821.log,518.0
+SP-1971479420422c8defa2bce9b1649e6f,IdP-only (no SP Response),2025-08-21T06:22:04,,TEST_SP2,,,idp__ssoserver.log,62652.0,,,,,,,SP2,sp2__ssoagent_20250821.log,525.0
+SP-f381159db778e8f66ed0eeee9037d928,IdP-only (no SP Response),2025-08-21T06:31:53,,TEST_SP2,,,idp__ssoserver.log,63043.0,,,,,,,SP2,sp2__ssoagent_20250821.log,614.0
+SP-e4f26e78ee996e2ac92de6071ad32097,IdP-only (no SP Response),2025-08-21T06:31:57,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,63192.0,,,,,,,SP1,sp1__ssoagent_20250821.log,605.0
+SP-c7899c23551196037a45f3f31520667c,SP-only (no matching IdP AuthnRequest found),,,,,,,,2025-08-20T08:13:25,,,,,,SP,sp_log__ssoagent_20250820.log,9.0
+SP-7586c6e6cc0f071161d863bec8097409,Unknown,2025-08-20T09:21:58,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,2071.0,2025-08-20T09:22:02,,,,,,SP,sp_log__ssoagent_20250820.log,103.0
+SP-6e911b6bb662910b302a9daa308ab9ec,Unknown,2025-08-20T09:27:36,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,2313.0,2025-08-20T09:27:40,,,,,,SP,sp_log__ssoagent_20250820.log,190.0
+SP-aca693c9b53459e2859ae0fe2f56fe37,Unknown,2025-08-20T09:39:38,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,2544.0,2025-08-20T09:39:42,,,,,,SP,sp_log__ssoagent_20250820.log,277.0
+SP-49a934b4c592822a5e42ff59608563d0,Unknown,2025-08-20T10:00:29,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,2895.0,2025-08-20T10:00:29,,,,,,SP,sp_log__ssoagent_20250820.log,394.0
+SP-19f48db02e3048f973031e6a9bc2fcd6,Unknown,2025-08-20T10:00:52,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver_20250820.log,3043.0,2025-08-20T10:00:52,,,,,,SP,sp_log__ssoagent_20250820.log,481.0
+SP-1ed80dfdedc3bd898c60a9460999240b,Unknown,2025-08-21T00:01:13,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver.log,18.0,2025-08-21T00:01:13,,,,,,SP,sp_log__ssoagent_20250821.log,9.0
+SP-60cb5c6896a1447a6426ef1d2c292a5b,Unknown,2025-08-21T00:01:34,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver.log,315.0,2025-08-21T00:01:35,,,,,,SP,sp_log__ssoagent_20250821.log,96.0
+SP-50b60ece6f5074e15343af77b3aa2133,Unknown,2025-08-21T00:18:17,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp_log__ssoserver.log,716.0,2025-08-21T00:18:18,,,,,,SP,sp_log__ssoagent_20250821.log,195.0
+SP-f394257672cf7065cbf7b24ec93317f1,Unknown,2025-08-21T05:23:51,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,173.0,2025-08-21T05:24:37,,,,,,SP1,sp1__ssoagent_20250821.log,9.0
+SP-0e1731686656235ffcaf004f4f8e8447,Unknown,2025-08-21T05:24:54,,TEST_SP2,,,idp__ssoserver.log,322.0,2025-08-21T05:24:58,,,,,,SP2,sp2__ssoagent_20250821.log,10.0
+SP-9da58e35804d3ff6f9cbc8237e2edae5,Unknown,2025-08-21T05:25:19,,TEST_SP2,,,idp__ssoserver.log,470.0,2025-08-21T05:25:19,,,,,,SP2,sp2__ssoagent_20250821.log,98.0
+SP-0ab985aaeeff96aac8b284bd5abfc189,Unknown,2025-08-21T05:30:17,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,634.0,2025-08-21T05:30:18,,,,,,SP1,sp1__ssoagent_20250821.log,96.0
+SP-bfeeb16c6db79e9daa66d7a4587ea970,Unknown,2025-08-21T05:30:28,,TEST_SP2,,,idp__ssoserver.log,783.0,2025-08-21T05:30:29,,,,,,SP2,sp2__ssoagent_20250821.log,192.0
+SP-e4a0a4e628cb96d675f9029ecb8cd8be,Unknown,2025-08-21T05:30:51,,TEST_SP2,,,idp__ssoserver.log,931.0,2025-08-21T05:30:52,,,,,,SP2,sp2__ssoagent_20250821.log,280.0
+SP-1e41378d03a4535e3ccb7246e921a5c5,Unknown,2025-08-21T05:30:57,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,1080.0,2025-08-21T05:30:58,,,,,,SP1,sp1__ssoagent_20250821.log,183.0
+SP-a06541d7f8c19429f75b1aed74f61894,Unknown,2025-08-21T05:41:23,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,1883.0,2025-08-21T05:41:23,,,,,,SP1,sp1__ssoagent_20250821.log,276.0
+SP-f674930027ba59048d1dd40efb24b0c4,Unknown,2025-08-21T05:44:18,,TEST_SP2,,,idp__ssoserver.log,2085.0,2025-08-21T05:44:18,,,,,,SP2,sp2__ssoagent_20250821.log,369.0
+SP-bbf16050236aac13bac38335e2715f6c,Unknown,2025-08-21T06:21:15,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,62333.0,2025-08-21T06:21:16,,,,,,SP1,sp1__ssoagent_20250821.log,363.0
+SP-5a5c9264fd8fa6d4aeaa9e2315b4b2b7,Unknown,2025-08-21T06:21:59,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,62503.0,2025-08-21T06:21:59,,,,,,SP1,sp1__ssoagent_20250821.log,450.0
+SP-1971479420422c8defa2bce9b1649e6f,Unknown,2025-08-21T06:22:04,,TEST_SP2,,,idp__ssoserver.log,62652.0,2025-08-21T06:22:04,,,,,,SP2,sp2__ssoagent_20250821.log,457.0
+SP-f381159db778e8f66ed0eeee9037d928,Unknown,2025-08-21T06:31:53,,TEST_SP2,,,idp__ssoserver.log,63043.0,2025-08-21T06:31:54,,,,,,SP2,sp2__ssoagent_20250821.log,546.0
+SP-e4f26e78ee996e2ac92de6071ad32097,Unknown,2025-08-21T06:31:57,,TEST_SP1,http://sp1.dev.com:40004/sso/Response.jsp,,idp__ssoserver.log,63192.0,2025-08-21T06:31:57,,,,,,SP1,sp1__ssoagent_20250821.log,537.0
+SP-c7899c23551196037a45f3f31520667c,Unknown,,,,,,,,,,,,,,SP,sp_log__ssoagent_20250820.log,77.0

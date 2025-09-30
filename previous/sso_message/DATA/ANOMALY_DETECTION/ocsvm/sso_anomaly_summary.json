@@ -1,0 +1,68 @@
+{
+  "탐지_요약": {
+    "모델명": "One Class SVM",
+    "모델_타입": "one_class_svm",
+    "모델_설명": "서포트 벡터 머신 기반 이상탐지. 복잡한 경계면 학습 가능",
+    "총_트랜잭션수": 59,
+    "정상_트랜잭션수": 52,
+    "이상_트랜잭션수": 7,
+    "이상치_비율": 11.864406779661017
+  },
+  "SP별_이상치_분포": {
+    "TEST_SP1": 5,
+    "TEST_SP2": 2
+  },
+  "시간대별_이상치_분포": {
+    "5": 2,
+    "6": 2,
+    "8": 2,
+    "9": 1
+  },
+  "모델_파라미터": {
+    "algorithm": "One Class SVM",
+    "model_type": "one_class_svm",
+    "parameters": {
+      "contamination": 0.1
+    },
+    "features_used": 22,
+    "feature_names": [
+      "hour",
+      "minute",
+      "day_of_week",
+      "is_weekend",
+      "is_business_hours",
+      "is_complete",
+      "is_success",
+      "transaction_duration_filled",
+      "request_id_length",
+      "response_id_length",
+      "time_since_last",
+      "hourly_transaction_count",
+      "duration_z_score",
+      "sp_provider",
+      "sp_TEST_SP1",
+      "sp_TEST_SP2",
+      "sp_nan",
+      "source_idp__ssoserver.log",
+      "source_idp_log__ssoserver.log",
+      "source_idp_log__ssoserver_20250820.log",
+      "source_sp_log__ssoagent_20250820.log",
+      "source_nan"
+    ]
+  },
+  "모델_성능": {
+    "name": "One Class SVM",
+    "description": "서포트 벡터 머신 기반 이상탐지. 복잡한 경계면 학습 가능",
+    "pros": [
+      "복잡한 경계면 학습",
+      "커널 트릭 활용",
+      "이론적 근거 탄탄"
+    ],
+    "cons": [
+      "파라미터 민감",
+      "대용량 데이터 처리 어려움",
+      "해석 어려움"
+    ],
+    "best_for": "중소규모 데이터, 복잡한 패턴"
+  }
+}

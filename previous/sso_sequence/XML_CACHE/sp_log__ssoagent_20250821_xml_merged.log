@@ -1,0 +1,27 @@
+[DEBUG][09:01:10][http-nio-40004-exec-6][com.dreamsecurity.sso.agent.crypto.CryptoApiFactory.getCryptoApi] - ### CryptoAPI class : com.dreamsecurity.sso.agent.crypto.api.JCAOSCryptoApi 
+[DEBUG][09:01:10][http-nio-40004-exec-6][com.dreamsecurity.sso.agent.crypto.api.JCAOSCryptoApi.<clinit>] - ### Crypto Initialization 
+[INFO][09:01:12][http-nio-40004-exec-6][com.dreamsecurity.sso.agent.crypto.SSOCryptoApi.startCryptoIntegrity] - ### MagicJCrypto Self Test ... OK 
+[INFO][09:01:12][http-nio-40004-exec-6][com.dreamsecurity.sso.agent.crypto.SSOCryptoApi.startSsoIntegrity] - ### Magic SSO Self Test ... OK 
+[INFO][09:01:12][http-nio-40004-exec-6][com.dreamsecurity.sso.agent.crypto.SSOCryptoApi.startSsoProcess] - ### Magic SSO Process ... OK 
+[DEBUG][09:01:12][Thread-2][com.dreamsecurity.sso.agent.ha.MapMonitor.run] - ### Map Monitor Start ... 
+[DEBUG][09:01:14][http-nio-40004-exec-7][com.dreamsecurity.sso.agent.provider.ServiceProvider.getSessionAttribute] - ### <SAML_RESPONSE:ID=IDP-d615c3ef8fc73a33f6abb30555976dad:InResponseTo=SP-1ed80dfdedc3bd898c60a9460999240b:TIME=2025-08-21T00:01:13.987Z:ISSUER=TEST_IDP:STATUS=Success> 
+[DEBUG][09:01:14][http-nio-40004-exec-7][com.dreamsecurity.sso.agent.provider.ServiceProvider.getSessionAttribute] - ### <SAML_ASSERTION:ID=IDP-d615c3ef8fc73a33f6abb30555976dad:InResponseTo=SP-1ed80dfdedc3bd898c60a9460999240b:TIME=2025-08-21T00:01:13.987Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-20T00:01:13.987Z:NOT_AFTER=2025-08-22T00:01:13.987Z:AUTHN_CONTEXT=Password> 
+[DEBUG][09:01:14][http-nio-40004-exec-7][com.dreamsecurity.sso.agent.provider.ServiceProvider.getSessionAttribute] - ### Assertion Verify = true 
+[DEBUG][09:01:35][http-nio-40004-exec-10][com.dreamsecurity.sso.agent.provider.ServiceProvider.getSessionAttribute] - ### <SAML_RESPONSE:ID=IDP-16b46ee3233fd83562100d32db60b228:InResponseTo=SP-60cb5c6896a1447a6426ef1d2c292a5b:TIME=2025-08-21T00:01:35.103Z:ISSUER=TEST_IDP:STATUS=Success> 
+[DEBUG][09:01:35][http-nio-40004-exec-10][com.dreamsecurity.sso.agent.provider.ServiceProvider.getSessionAttribute] - ### <SAML_ASSERTION:ID=IDP-16b46ee3233fd83562100d32db60b228:InResponseTo=SP-60cb5c6896a1447a6426ef1d2c292a5b:TIME=2025-08-21T00:01:35.103Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-20T00:01:35.103Z:NOT_AFTER=2025-08-22T00:01:35.103Z:AUTHN_CONTEXT=Password> 
+[DEBUG][09:01:35][http-nio-40004-exec-10][com.dreamsecurity.sso.agent.provider.ServiceProvider.getSessionAttribute] - ### Assertion Verify = true 
+[DEBUG][09:13:17][http-nio-40004-exec-5][com.dreamsecurity.sso.agent.crypto.CryptoApiFactory.getCryptoApi] - ### CryptoAPI class : com.dreamsecurity.sso.agent.crypto.api.JCAOSCryptoApi 
+[DEBUG][09:13:17][http-nio-40004-exec-5][com.dreamsecurity.sso.agent.crypto.api.JCAOSCryptoApi.<clinit>] - ### Crypto Initialization 
+[INFO][09:13:19][http-nio-40004-exec-5][com.dreamsecurity.sso.agent.crypto.SSOCryptoApi.startCryptoIntegrity] - ### MagicJCrypto Self Test ... OK 
+[INFO][09:13:19][http-nio-40004-exec-5][com.dreamsecurity.sso.agent.crypto.SSOCryptoApi.startSsoIntegrity] - ### Magic SSO Self Test ... OK 
+[INFO][09:13:19][http-nio-40004-exec-5][com.dreamsecurity.sso.agent.crypto.SSOCryptoApi.startSsoProcess] - ### Magic SSO Process ... OK 
+[DEBUG][09:13:19][Thread-2][com.dreamsecurity.sso.agent.ha.MapMonitor.run] - ### Map Monitor Start ... 
+[DEBUG][09:18:14][http-nio-40004-exec-2][com.dreamsecurity.sso.agent.crypto.CryptoApiFactory.getCryptoApi] - ### CryptoAPI class : com.dreamsecurity.sso.agent.crypto.api.JCAOSCryptoApi 
+[DEBUG][09:18:14][http-nio-40004-exec-2][com.dreamsecurity.sso.agent.crypto.api.JCAOSCryptoApi.<clinit>] - ### Crypto Initialization 
+[INFO][09:18:16][http-nio-40004-exec-2][com.dreamsecurity.sso.agent.crypto.SSOCryptoApi.startCryptoIntegrity] - ### MagicJCrypto Self Test ... OK 
+[INFO][09:18:16][http-nio-40004-exec-2][com.dreamsecurity.sso.agent.crypto.SSOCryptoApi.startSsoIntegrity] - ### Magic SSO Self Test ... OK 
+[INFO][09:18:16][http-nio-40004-exec-2][com.dreamsecurity.sso.agent.crypto.SSOCryptoApi.startSsoProcess] - ### Magic SSO Process ... OK 
+[DEBUG][09:18:16][Thread-2][com.dreamsecurity.sso.agent.ha.MapMonitor.run] - ### Map Monitor Start ... 
+[DEBUG][09:18:18][http-nio-40004-exec-3][com.dreamsecurity.sso.agent.provider.ServiceProvider.getSessionAttribute] - ### <SAML_RESPONSE:ID=IDP-adb771d68adeb9b254c546360bb8ef9a:InResponseTo=SP-50b60ece6f5074e15343af77b3aa2133:TIME=2025-08-21T00:18:18.640Z:ISSUER=TEST_IDP:STATUS=Success> 
+[DEBUG][09:18:18][http-nio-40004-exec-3][com.dreamsecurity.sso.agent.provider.ServiceProvider.getSessionAttribute] - ### <SAML_ASSERTION:ID=IDP-adb771d68adeb9b254c546360bb8ef9a:InResponseTo=SP-50b60ece6f5074e15343af77b3aa2133:TIME=2025-08-21T00:18:18.640Z:ISSUER=TEST_IDP:USER=ssouser:USER_FORMAT=entity:SUBJECT_METHOD=bearer:NOT_BEFORE=2025-08-20T00:18:18.640Z:NOT_AFTER=2025-08-22T00:18:18.640Z:AUTHN_CONTEXT=Password> 
+[DEBUG][09:18:18][http-nio-40004-exec-3][com.dreamsecurity.sso.agent.provider.ServiceProvider.getSessionAttribute] - ### Assertion Verify = true 

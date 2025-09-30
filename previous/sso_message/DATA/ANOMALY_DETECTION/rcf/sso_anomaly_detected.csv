@@ -1,0 +1,1 @@
+request_id,request_timestamp,sp_provider,destination_url,consumer_service_url,response_id,response_timestamp,in_response_to,status_code,user_id,name_id,transaction_duration,log_source,anomaly_label,anomaly_score,is_anomaly
