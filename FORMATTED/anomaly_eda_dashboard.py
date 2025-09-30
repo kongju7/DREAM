@@ -20,6 +20,31 @@ import sys
 import os
 from pathlib import Path
 import ipaddress
+import base64
+import numpy as np
+
+# 로고 위치 
+logo_path = "/home/kongju/DATA/DREAM/IMG/digicap_logo.png"
+
+# 전역 이상 패턴 매핑 (노란색 계열의 조화로운 색상)
+GLOBAL_PATTERN_MAPPING = {
+    'delta_too_fast': {'name': '너무 빠른 요청', 'color': '#FFD700'},      # 골드
+    'delta_too_slow': {'name': '너무 느린 요청', 'color': '#FFA500'},       # 오렌지
+    'has_error_keyword': {'name': '오류 키워드', 'color': '#FF8C00'},       # 다크 오렌지
+    'simultaneous_event': {'name': '동시 이벤트', 'color': '#F0E68C'},      # 카키
+    'message_unusual_length': {'name': '비정상 메시지 길이', 'color': '#FFFF00'}, # 옐로우
+    'step_jump': {'name': '단계 점프', 'color': '#FFB347'},                 # 살구색
+    'step_reverse': {'name': '단계 역행', 'color': '#DAA520'},              # 골든로드
+    'high_anomaly_score': {'name': '높은 이상 점수', 'color': '#B8860B'}    # 다크 골든로드
+}
+
+def get_pattern_display_name(pattern_key):
+    """이상 패턴 키를 한국어 표시명으로 변환"""
+    return GLOBAL_PATTERN_MAPPING.get(pattern_key, {'name': pattern_key.replace('_', ' ').title()})['name']
+
+def get_pattern_color(pattern_key):
+    """이상 패턴 키의 색상 반환"""
+    return GLOBAL_PATTERN_MAPPING.get(pattern_key, {'color': '#999999'})['color']
 
 # 색상 설정 import
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
@@ -131,7 +156,7 @@ def create_download_button(fig, filename, button_text="그래프 다운로드"):
         )
         return False
 
-@st.cache_data
+@st.cache_data(ttl=300, show_spinner="데이터 로딩 중...")  # 5분 캐시
 def load_processed_data():
     """전처리된 데이터 로드"""
     data_dir = Path(__file__).parent / "processed_data"
@@ -211,15 +236,43 @@ def get_basic_statistics(events_df, sessions_df):
             stats['high_anomaly_sessions'] = (sessions_df['anomaly_score_final'] > 1.0).sum()
             stats['avg_anomaly_score'] = sessions_df['anomaly_score_final'].mean()
         
-        # 이상 패턴 통계
+        # 이상 패턴 통계 (전역 매핑 사용)
         anomaly_patterns = {}
-        for col in ['step_jump', 'delta_too_fast', 'delta_too_slow', 'has_error_keyword']:
+        for col in GLOBAL_PATTERN_MAPPING.keys():
             if col in events_df.columns:
                 anomaly_patterns[col] = (events_df[col] > 0).sum()
         stats['anomaly_patterns'] = anomaly_patterns
     
     return stats
 
+@st.cache_data(ttl=300, hash_funcs={pd.DataFrame: lambda df: str(df.shape) + str(df.dtypes.to_dict())})
+def calculate_basic_stats(events_df, sessions_df):
+    """기본 통계 계산 (캐시됨)"""
+    stats = {}
+    
+    if not events_df.empty:
+        stats['total_events'] = len(events_df)
+        stats['unique_sessions'] = events_df['session_id'].nunique()
+        stats['unique_users'] = events_df['user_id'].nunique() if 'user_id' in events_df.columns else 0
+        stats['unique_ips'] = events_df['source_ip'].nunique() if 'source_ip' in events_df.columns else 0
+        
+        if 'timestamp' in events_df.columns:
+            stats['date_range'] = {
+                'start': events_df['timestamp'].min(),
+                'end': events_df['timestamp'].max()
+            }
+    
+    if not sessions_df.empty:
+        stats['successful_sessions'] = (sessions_df['is_successful'] == 1).sum() if 'is_successful' in sessions_df.columns else 0
+        stats['total_sessions'] = len(sessions_df)
+        
+        if 'anomaly_score_final' in sessions_df.columns:
+            stats['high_anomaly_sessions'] = (sessions_df['anomaly_score_final'] > 1.0).sum()
+            stats['avg_anomaly_score'] = sessions_df['anomaly_score_final'].mean()
+    
+    return stats
+
+@st.cache_data(ttl=300)  # 5분 캐시
 def plot_overview_metrics(stats):
     """개요 메트릭 표시"""
     if not stats:
@@ -264,51 +317,60 @@ def plot_session_analysis(sessions_df):
         return
     
     col1, col2 = st.columns(2)
-    
+
     with col1:
-        # 성공/실패 분포 (도넛 차트로 변경)
-        success_counts = sessions_df['is_successful'].value_counts()
-        success_labels = ['실패', '성공']
-        
-        fig = go.Figure(data=[go.Pie(
-            labels=success_labels,
-            values=success_counts.values,
-            hole=0.4,
-            marker_colors=[ERROR_COLOR, SUCCESS_COLOR]
-        )])
+        # 성공/실패 분포 (누적 막대 그래프)
+        success_counts = sessions_df['is_successful'].value_counts().rename(index={0: '실패', 1: '성공'})
+        success_df = success_counts.reset_index()
+        success_df.columns = ['상태', '세션 수']
+
+        fig = px.bar(
+            success_df,
+            x='세션 수',
+            y='상태',
+            orientation='h',
+            color='상태',
+            color_discrete_map={'성공': SUCCESS_COLOR, '실패': ERROR_COLOR},
+            text='세션 수'
+        )
         fig.update_layout(
             title="세션 성공/실패 분포",
-            showlegend=True,
-            annotations=[dict(text='세션', x=0.5, y=0.5, font_size=20, showarrow=False)]
+            xaxis_title="세션 수",
+            yaxis_title="상태",
+            showlegend=False
         )
-        fig.update_traces(textposition='inside', textinfo='percent+label')
-        st.plotly_chart(fig, config={'displayModeBar': False})
+        fig.update_xaxes(tickformat="d", dtick=1)  # 정수 형태로 표시, 1 간격으로 눈금
+        fig.update_traces(texttemplate='%{x:d}')  # 텍스트도 정수로 표시
+        fig.update_traces(textposition='outside')
+        st.plotly_chart(fig, config={'displayModeBar': False, 'responsive': True}, 
+                       use_container_width=True)
         create_download_button(fig, "session_success_distribution", "성공/실패 분포 다운로드")
-    
+
     with col2:
-        # 이상 점수 분포 (히스토그램 -> 박스 플롯으로 변경)
+        # 이상 점수 분포 (박스 플롯 + 분포 요약)
         if 'anomaly_score_final' in sessions_df.columns:
             fig = go.Figure()
-            
+
             fig.add_trace(go.Box(
                 y=sessions_df['anomaly_score_final'],
                 name='이상 점수',
-                boxpoints='all',
-                jitter=0.3,
-                pointpos=-1.8,
-                fillcolor=PRIMARY_COLOR,
+                boxpoints='outliers',
+                jitter=0.2,
+                pointpos=-1.6,
+                fillcolor=hex_to_rgba(PRIMARY_COLOR, 0.4),
                 line=dict(color=PRIMARY_COLOR),
-                marker=dict(color=PRIMARY_COLOR, size=4)
+                marker=dict(color=PRIMARY_COLOR, size=6),
+                hovertemplate="<b>이상 점수</b><br>중위값: %{median:.3f}<extra></extra>"
             ))
-            
-            # 임계값 라인 추가
+
             fig.add_hline(
                 y=1.0,
                 line_dash="dash",
                 line_color=WARNING_COLOR,
-                annotation_text="위험 임계점"
+                annotation_text="위험 임계점",
+                annotation_position="top right"
             )
-            
+
             fig.update_layout(
                 title="세션별 이상 점수 분포",
                 yaxis_title="이상 점수",
@@ -316,6 +378,104 @@ def plot_session_analysis(sessions_df):
             )
             st.plotly_chart(fig, config={'displayModeBar': False})
             create_download_button(fig, "anomaly_score_distribution", "이상 점수 분포 다운로드")
+
+    # 세션 분포 추가 시각화
+    addl_col1, addl_col2 = st.columns(2)
+
+    if 'duration_ms' in sessions_df.columns:
+        with addl_col1:
+            # 성공 여부를 명확한 카테고리로 변환
+            sessions_df_display = sessions_df.copy()
+            sessions_df_display['성공여부'] = sessions_df_display['is_successful'].map({1: '성공', 0: '실패'})
+            
+            duration_fig = px.histogram(
+                sessions_df_display,
+                x='duration_ms',
+                nbins=30,
+                color='성공여부',
+                color_discrete_map={'성공': SUCCESS_COLOR, '실패': ERROR_COLOR},
+                labels={'duration_ms': '세션 지속시간(ms)', '성공여부': '성공 여부'}
+            )
+            duration_fig.update_layout(
+                title="세션 지속시간 분포",
+                bargap=0.05,
+                legend_title="성공 여부",
+                yaxis_title="세션 수"
+            )
+            duration_fig.update_yaxes(tickformat="d", dtick=1)  # y축을 정수 간격으로 설정
+            st.plotly_chart(duration_fig, config={'displayModeBar': False})
+            create_download_button(duration_fig, "session_duration_hist", "세션 지속시간 분포 다운로드")
+
+    if 'n_events' in sessions_df.columns:
+        with addl_col2:
+            events_fig = px.box(
+                sessions_df,
+                x='is_successful',
+                y='n_events',
+                color='is_successful',
+                points='outliers',
+                color_discrete_map={1: SUCCESS_COLOR, 0: ERROR_COLOR},
+                labels={'is_successful': '성공 여부', 'n_events': '이벤트 수'}
+            )
+            events_fig.update_xaxes(
+                tickvals=[0, 1],
+                ticktext=['실패', '성공']
+            )
+            events_fig.update_layout(
+                title="세션 이벤트 수 분포",
+                showlegend=False
+            )
+            events_fig.update_yaxes(tickformat="d", dtick=1)  # y축을 1 간격 정수로 설정
+            st.plotly_chart(events_fig, config={'displayModeBar': False})
+            create_download_button(events_fig, "session_events_box", "세션 이벤트 수 분포 다운로드")
+
+    # 이상 점수와 지속시간 관계
+    if {'duration_ms', 'anomaly_score_final'}.issubset(sessions_df.columns):
+        # null 값이 없는 데이터만 필터링
+        valid_data = sessions_df.dropna(subset=['duration_ms', 'anomaly_score_final'])
+        
+        # 데이터 개수 표시
+        st.info(f"유효한 데이터 포인트: {len(valid_data)}개")
+        
+        if len(valid_data) > 0:
+            # 겹치는 점들을 위해 작은 지터 추가
+            import numpy as np
+            jitter_x = np.random.normal(0, valid_data['duration_ms'].std() * 0.02, len(valid_data))
+            jitter_y = np.random.normal(0, valid_data['anomaly_score_final'].std() * 0.02, len(valid_data))
+            
+            valid_data_jittered = valid_data.copy()
+            valid_data_jittered['duration_ms_jittered'] = valid_data['duration_ms'] + jitter_x
+            valid_data_jittered['anomaly_score_final_jittered'] = valid_data['anomaly_score_final'] + jitter_y
+            
+            # 성공 여부를 명확한 카테고리로 변환
+            valid_data_jittered['성공여부'] = valid_data_jittered['is_successful'].map({1: '성공', 0: '실패'})
+            
+            scatter_fig = px.scatter(
+                valid_data_jittered,
+                x='duration_ms_jittered',
+                y='anomaly_score_final_jittered',
+                color='성공여부',
+                color_discrete_map={'성공': SUCCESS_COLOR, '실패': ERROR_COLOR},
+                labels={
+                    'duration_ms_jittered': '세션 지속시간(ms)',
+                    'anomaly_score_final_jittered': '이상 점수',
+                    '성공여부': '성공 여부'
+                },
+                hover_data={'session_id': True, 'duration_ms': True, 'anomaly_score_final': True},
+                opacity=0.8
+            )
+            scatter_fig.add_hline(y=1.0, line_dash='dot', line_color=WARNING_COLOR)
+            scatter_fig.update_layout(
+                title="세션 지속시간 대비 이상 점수",
+                legend_title="성공 여부",
+                xaxis_title="세션 지속시간(ms)",
+                yaxis_title="이상 점수"
+            )
+            scatter_fig.update_traces(marker=dict(size=10, line=dict(width=1, color='white')))  # 점 크기와 테두리 추가
+            st.plotly_chart(scatter_fig, config={'displayModeBar': False})
+            create_download_button(scatter_fig, "duration_vs_anomaly", "지속시간-이상점수 산점도 다운로드")
+        else:
+            st.warning("유효한 데이터가 없습니다. duration_ms 또는 anomaly_score_final 값이 누락되었을 수 있습니다.")
 
 def plot_time_analysis(events_df, sessions_df):
     """시간 기반 분석"""
@@ -326,71 +486,101 @@ def plot_time_analysis(events_df, sessions_df):
     # 시간별 패턴
     if 'ts_hour' in events_df.columns:
         col1, col2 = st.columns(2)
-        
+
         with col1:
-            # 시간별 이벤트 분포 (레이더 차트로 변경)
-            hourly_counts = events_df['ts_hour'].value_counts().sort_index()
-            
-            # 24시간 전체를 포함하도록 보정
-            full_hours = range(24)
-            hourly_data = [hourly_counts.get(hour, 0) for hour in full_hours]
-            
-            fig = go.Figure()
-            
-            
-            fig.add_trace(go.Scatterpolar(
-                r=hourly_data,
-                theta=[f"{hour}시" for hour in full_hours],
-                fill='toself',
-                fillcolor=hex_to_rgba(PRIMARY_COLOR, 0.3),
-                line=dict(color=PRIMARY_COLOR, width=2),
-                name='이벤트 수'
-            ))
-            
-            fig.update_layout(
-                polar=dict(
-                    radialaxis=dict(
-                        visible=True,
-                        range=[0, max(hourly_data) * 1.1] if max(hourly_data) > 0 else [0, 1]
-                    )),
-                title="시간대별 이벤트 분포 (24시간)",
+            hourly_counts = (
+                events_df['ts_hour']
+                .value_counts()
+                .reindex(range(24), fill_value=0)
+                .sort_index()
+                .reset_index()
+            )
+            hourly_counts.columns = ['시간', '이벤트 수']
+
+            fig = px.line(
+                hourly_counts,
+                x='시간',
+                y='이벤트 수',
+                markers=True,
+                title="시간대별 이벤트 추이"
+            )
+            fig.update_traces(line_color=PRIMARY_COLOR)
+            fig.update_layout(xaxis=dict(dtick=1, range=[0, 24]))
+            fig.update_yaxes(tickformat="d", dtick=1)  # y축을 1 간격 정수로 설정
+            st.plotly_chart(fig, config={'displayModeBar': False})
+            create_download_button(fig, "hourly_events", "시간별 이벤트 추이 다운로드")
+
+        with col2:
+            if 'ts_dayofweek' in events_df.columns:
+                pivot_df = (
+                    events_df.groupby(['ts_dayofweek', 'ts_hour'])
+                    .size()
+                    .reset_index(name='count')
+                )
+                pivot_table = pivot_df.pivot(
+                    index='ts_dayofweek',
+                    columns='ts_hour',
+                    values='count'
+                ).reindex(range(7)).fillna(0)
+
+                heatmap = go.Figure(data=go.Heatmap(
+                    z=pivot_table.values,
+                    x=[f"{hour}시" for hour in pivot_table.columns],
+                    y=[WEEKDAY_KOREAN[idx] for idx in pivot_table.index],
+                    colorscale='Blues'
+                ))
+                heatmap.update_layout(
+                    title="요일·시간별 이벤트 히트맵",
+                    xaxis_title="시간",
+                    yaxis_title="요일"
+                )
+                st.plotly_chart(heatmap, config={'displayModeBar': False})
+                create_download_button(heatmap, "weekday_hour_heatmap", "요일·시간 히트맵 다운로드")
+
+    if {'ts_is_business_hours', 'ts_is_weekend'}.issubset(events_df.columns):
+        business_col, weekend_col = st.columns(2)
+
+        with business_col:
+            biz_counts = (
+                events_df['ts_is_business_hours']
+                .map({1: '업무시간', 0: '비업무시간'})
+                .value_counts()
+                .reset_index()
+            )
+            biz_counts.columns = ['시간 구분', '이벤트 수']
+            biz_fig = px.bar(
+                biz_counts,
+                x='시간 구분',
+                y='이벤트 수',
+                color='시간 구분',
+                color_discrete_map={'업무시간': PRIMARY_COLOR, '비업무시간': WARNING_COLOR}
+            )
+            biz_fig.update_layout(
+                title="업무시간 vs 비업무시간 이벤트 비교",
                 showlegend=False
             )
-            st.plotly_chart(fig, config={'displayModeBar': False})
-            create_download_button(fig, "hourly_events", "시간별 이벤트 분포 다운로드")
-        
-        with col2:
-            # 요일별 패턴 (방사형 막대 차트)
-            if 'ts_dayofweek' in events_df.columns:
-                weekday_counts = events_df['ts_dayofweek'].value_counts().sort_index()
-                
-                # 7일 전체를 포함하도록 보정
-                full_weekdays = range(7)
-                weekday_data = [weekday_counts.get(day, 0) for day in full_weekdays]
-                weekday_labels = [WEEKDAY_KOREAN[i] for i in full_weekdays]
-                
-                fig = go.Figure()
-                
-                fig.add_trace(go.Scatterpolar(
-                    r=weekday_data,
-                    theta=weekday_labels,
-                    fill='toself',
-                    fillcolor=hex_to_rgba(SUCCESS_COLOR, 0.3),
-                    line=dict(color=SUCCESS_COLOR, width=2),
-                    name='이벤트 수'
-                ))
-                
-                fig.update_layout(
-                    polar=dict(
-                        radialaxis=dict(
-                            visible=True,
-                            range=[0, max(weekday_data) * 1.1] if max(weekday_data) > 0 else [0, 1]
-                        )),
-                    title="요일별 이벤트 분포",
-                    showlegend=False
-                )
-                st.plotly_chart(fig, config={'displayModeBar': False})
-                create_download_button(fig, "weekday_events", "요일별 이벤트 분포 다운로드")
+            biz_fig.update_yaxes(tickformat="d", dtick=1)  # y축을 1 간격 정수로 설정
+            st.plotly_chart(biz_fig, config={'displayModeBar': False})
+            create_download_button(biz_fig, "business_hours_bar", "업무시간 이벤트 비교 다운로드")
+
+        with weekend_col:
+            weekend_counts = (
+                events_df['ts_is_weekend']
+                .map({1: '주말', 0: '평일'})
+                .value_counts()
+                .reset_index()
+            )
+            weekend_counts.columns = ['요일 구분', '이벤트 수']
+            weekend_fig = px.pie(
+                weekend_counts,
+                names='요일 구분',
+                values='이벤트 수',
+                color='요일 구분',
+                color_discrete_map={'주말': SUCCESS_COLOR, '평일': PRIMARY_COLOR}
+            )
+            weekend_fig.update_layout(title="주말 vs 평일 이벤트 비중")
+            st.plotly_chart(weekend_fig, config={'displayModeBar': False})
+            create_download_button(weekend_fig, "weekend_pie", "주말/평일 이벤트 다운로드")
     
     # 세션 지속시간 분석 (표로 변경)
     if not sessions_df.empty and 'duration_ms' in sessions_df.columns:
@@ -448,43 +638,102 @@ def plot_authentication_flow(events_df):
         return
     
     col1, col2 = st.columns(2)
+
+    # 이벤트별 조화로운 색상 매핑 준비 (빨간색, 노란색 제외)
+    harmonious_colors = [
+        '#2E86AB',  # 파란색 (신뢰감)
+        '#A23B72',  # 마젠타 (주의)
+        '#4A90E2',  # 스카이 블루 (활동)
+        '#6B46C1',  # 인디고 (중요)
+        '#6A994E',  # 초록색 (성공)
+        '#7209B7',  # 보라색 (특별)
+        '#577590',  # 청회색 (중성)
+        '#8B5A3C',  # 브라운 (안정)
+        '#81B29A',  # 세이지 그린 (차분)
+        '#5C6B73',  # 슬레이트 그레이 (온화)
+        '#3D5A80',  # 네이비 (안정)
+        '#98C1D9'   # 라이트 블루 (부드러움)
+    ]
     
+    unique_events = []
+    if 'event' in events_df.columns:
+        unique_events = sorted(events_df['event'].dropna().astype(str).unique().tolist())
+    
+    event_color_map = {
+        event_name: harmonious_colors[idx % len(harmonious_colors)]
+        for idx, event_name in enumerate(unique_events)
+    }
+
     with col1:
-        # 이벤트 타입별 분포 (트리맵으로 변경)
-        if 'event' in events_df.columns:
-            event_counts = events_df['event'].value_counts()
-            
-            fig = go.Figure(go.Treemap(
-                labels=event_counts.index,
-                values=event_counts.values,
-                parents=[""] * len(event_counts),
-                textinfo="label+value+percent parent",
-                marker_colorscale=[[0, PRIMARY_COLOR], [1, SUCCESS_COLOR]],
-                textfont_size=12
-            ))
-            
-            fig.update_layout(
-                title="이벤트 타입별 분포",
-                font_size=12
+        # 단계와 이벤트를 결합한 흐름 막대 그래프
+        if {'event', 'step_id'}.issubset(events_df.columns):
+            filtered_events = events_df.dropna(subset=['event', 'step_id']).copy()
+            filtered_events['step_id'] = pd.to_numeric(filtered_events['step_id'], errors='coerce')
+            filtered_events['event'] = filtered_events['event'].astype(str)
+            filtered_events = filtered_events.dropna(subset=['step_id'])
+
+            combined_counts = (
+                filtered_events.groupby(['step_id', 'event'])
+                .size()
+                .reset_index(name='이벤트 수')
             )
-            st.plotly_chart(fig, config={'displayModeBar': False})
-            create_download_button(fig, "event_types", "이벤트 타입 분포 다운로드")
-    
+
+            if not combined_counts.empty:
+                combined_counts['step_id'] = combined_counts['step_id'].astype(int)
+                combined_counts = combined_counts.sort_values(
+                    ['step_id', '이벤트 수'], ascending=[True, False]
+                )
+                combined_counts['단계 정보'] = combined_counts.apply(
+                    lambda row: f"단계 {row['step_id']}: {row['event']}", axis=1
+                )
+
+                category_order = combined_counts['단계 정보'].drop_duplicates().tolist()
+                fig = px.bar(
+                    combined_counts,
+                    x='이벤트 수',
+                    y='단계 정보',
+                    color='event',
+                    orientation='h',
+                    color_discrete_map=event_color_map,
+                    labels={'event': '이벤트 유형'}
+                )
+                fig.update_layout(
+                    title="이벤트 단계별 발생 현황",
+                    showlegend=True,
+                    yaxis=dict(
+                        autorange='reversed',
+                        categoryorder='array',
+                        categoryarray=category_order
+                    ),
+                    legend_title="이벤트 유형"
+                )
+                fig.update_xaxes(tickformat="d", dtick=1)  # x축을 1 간격 정수로 설정 (horizontal bar)
+                st.plotly_chart(fig, config={'displayModeBar': False})
+                create_download_button(fig, "event_step_distribution", "이벤트 단계별 그래프 다운로드")
+
     with col2:
-        # 단계별 분포 (막대 그래프로 변경)
+        # 단계별 분포 (막대 그래프로 변경) - 단계별 투명도 적용
         if 'step_id' in events_df.columns:
             step_counts = events_df['step_id'].value_counts().sort_index()
             
             fig = go.Figure()
             
-            fig.add_trace(go.Bar(
-                x=step_counts.index,
-                y=step_counts.values,
-                marker_color=PRIMARY_COLOR,
-                name='이벤트 수',
-                text=step_counts.values,
-                textposition='outside'
-            ))
+            # 단계별 투명도 생성 (0.3부터 1.0까지 점진적 증가)
+            steps = list(step_counts.index)
+            num_steps = len(steps)
+            opacities = [0.3 + (0.7 * i / max(1, num_steps - 1)) for i in range(num_steps)]
+            
+            # 각 단계마다 개별 막대 추가
+            for i, (step, count) in enumerate(step_counts.items()):
+                fig.add_trace(go.Bar(
+                    x=[step],
+                    y=[count],
+                    marker_color=hex_to_rgba(PRIMARY_COLOR, opacities[i]),
+                    name=f'단계 {step}',
+                    text=[count],
+                    textposition='outside',
+                    showlegend=False
+                ))
             
             fig.update_layout(
                 title="인증 단계별 분포",
@@ -499,13 +748,13 @@ def plot_authentication_flow(events_df):
                 ),
                 yaxis=dict(range=[0, step_counts.values.max() * 1.1])  # y축 0부터 시작
             )
+            fig.update_yaxes(tickformat="d", dtick=1)  # y축을 1 간격 정수로 설정
             st.plotly_chart(fig, config={'displayModeBar': False})
             create_download_button(fig, "auth_steps", "인증 단계 분포 다운로드")
     
-    # 단계 이상 패턴 분석 (히트맵으로 변경)
-    anomaly_cols = ['step_jump', 'step_reverse', 'step_event_mismatch']
-    existing_cols = [col for col in anomaly_cols if col in events_df.columns]
-    
+    # 단계 이상 패턴 분석 (히트맵) - 전역 매핑 사용
+    existing_cols = [col for col in GLOBAL_PATTERN_MAPPING.keys() if col in events_df.columns]
+
     if existing_cols:
         anomaly_data = []
         anomaly_labels = []
@@ -514,27 +763,81 @@ def plot_authentication_flow(events_df):
             count = (events_df[col] > 0).sum()
             if count > 0:
                 anomaly_data.append([count])
-                anomaly_labels.append(col.replace('_', ' ').title())
+                anomaly_labels.append(get_pattern_display_name(col))
         
         if anomaly_data:
-            fig = go.Figure(data=go.Heatmap(
-                z=anomaly_data,
-                y=anomaly_labels,
-                x=['발생 횟수'],
-                colorscale=[[0, 'white'], [1, WARNING_COLOR]],
-                showscale=True,
-                text=anomaly_data,
-                texttemplate="%{text}",
-                textfont={"size": 16}
-            ))
+            # 패턴별 일관된 색상을 위해 막대 그래프로 변경
+            pattern_data = []
+            pattern_colors = []
+            pattern_names = []
             
-            fig.update_layout(
-                title="인증 플로우 이상 패턴",
-                xaxis_title="",
-                yaxis_title=""
-            )
-            st.plotly_chart(fig, config={'displayModeBar': False})
-            create_download_button(fig, "auth_flow_anomalies", "인증 플로우 이상 패턴 다운로드")
+            for col in existing_cols:
+                count = (events_df[col] > 0).sum()
+                if count > 0:
+                    pattern_data.append(count)
+                    pattern_colors.append(get_pattern_color(col))
+                    pattern_names.append(get_pattern_display_name(col))
+            
+            fig = go.Figure()
+            
+            # 각 패턴별로 개별 색상 적용
+            for i, (name, count, color) in enumerate(zip(pattern_names, pattern_data, pattern_colors)):
+                fig.add_trace(go.Bar(
+                    x=[count],
+                    y=[name],
+                    orientation='h',
+                    marker_color=color,
+                    text=[count],
+                    textposition='outside',
+                    name=name,
+                    showlegend=False
+                ))            
+
+
+    # 세션 진행 흐름 (Sankey)
+    if {'session_id', 'event', 'timestamp'}.issubset(events_df.columns):
+        sorted_events = events_df.sort_values(['session_id', 'timestamp', 'step_id'])
+        sorted_events['next_event'] = sorted_events.groupby('session_id')['event'].shift(-1)
+        transitions = (
+            sorted_events.dropna(subset=['next_event'])
+            .groupby(['event', 'next_event'])
+            .size()
+            .reset_index(name='count')
+        )
+
+        if not transitions.empty:
+            labels = pd.unique(transitions[['event', 'next_event']].astype(str).values.ravel('K')).tolist()
+            label_to_index = {label: idx for idx, label in enumerate(labels)}
+
+            node_colors = [
+                event_color_map.get(label, harmonious_colors[idx % len(harmonious_colors)])
+                for idx, label in enumerate(labels)
+            ]
+
+            sankey_fig = go.Figure(data=[go.Sankey(
+                arrangement="snap",
+                node=dict(
+                    pad=15,
+                    thickness=20,
+                    line=dict(color="black", width=0.3),
+                    label=labels,
+                    color=node_colors
+                ),
+                link=dict(
+                    source=[label_to_index[str(src)] for src in transitions['event']],
+                    target=[label_to_index[str(tgt)] for tgt in transitions['next_event']],
+                    value=transitions['count'],
+                    color=[
+                        hex_to_rgba(event_color_map.get(str(src), harmonious_colors[i % len(harmonious_colors)]), 0.4)
+                        for i, src in enumerate(transitions['event'])
+                    ]
+                ),
+                textfont=dict(color='black', size=12)
+            )])
+
+            sankey_fig.update_layout(title="세션 단계 전이 흐름")
+            st.plotly_chart(sankey_fig, config={'displayModeBar': False})
+            create_download_button(sankey_fig, "auth_flow_sankey", "세션 단계 흐름 다운로드")
 
 def plot_detailed_anomalies(events_df):
     """상세 이상 패턴 분석"""
@@ -542,11 +845,8 @@ def plot_detailed_anomalies(events_df):
         st.warning("이벤트 데이터가 없습니다.")
         return
     
-    # 이상 패턴별 분석
-    anomaly_features = [
-        'delta_too_fast', 'delta_too_slow', 'has_error_keyword', 
-        'simultaneous_event', 'message_unusual_length'
-    ]
+    # 이상 패턴별 분석 (전역 매핑 사용)
+    anomaly_features = list(GLOBAL_PATTERN_MAPPING.keys())
     
     existing_features = [feat for feat in anomaly_features if feat in events_df.columns]
     
@@ -554,78 +854,203 @@ def plot_detailed_anomalies(events_df):
         st.info("이상 패턴 특징이 없습니다.")
         return
     
-    # 이상 패턴 요약
-    anomaly_summary = {}
+    total_events = len(events_df)
+
+    # 이상 패턴 요약 (일관된 명칭과 색상 사용)
+    summary_records = []
     for feature in existing_features:
-        count = (events_df[feature] > 0).sum()
-        if count > 0:
-            anomaly_summary[feature.replace('_', ' ').title()] = count
-    
-    if anomaly_summary:
+        if feature in events_df.columns:
+            count = int((events_df[feature] > 0).sum())
+            if count > 0:
+                summary_records.append({
+                    'pattern': feature,
+                    'pattern_name': get_pattern_display_name(feature),
+                    'color': get_pattern_color(feature),
+                    'count': count,
+                    'ratio': round((count / total_events) * 100, 2)
+                })
+
+    if summary_records:
+        summary_df = pd.DataFrame(summary_records)
         col1, col2 = st.columns(2)
-        
+
         with col1:
-            # 이상 패턴 선버스트 차트
-            labels = list(anomaly_summary.keys())
-            values = list(anomaly_summary.values())
-            
             fig = go.Figure()
-            
             fig.add_trace(go.Bar(
-                x=labels,
-                y=values,
-                marker_color=[WARNING_COLOR, ERROR_COLOR, PRIMARY_COLOR][:len(labels)],
-                text=values,
-                textposition='outside',
-                opacity=0.8
+                x=summary_df['pattern_name'],  # 한국어 명칭 사용
+                y=summary_df['count'],
+                marker_color=summary_df['color'],  # 개별 색상 사용
+                name='발생 건수',
+                text=summary_df['count'],
+                textposition='outside'
             ))
-            
             fig.update_layout(
                 title="이상 패턴별 발생 현황",
                 xaxis_title="이상 패턴 유형",
                 yaxis_title="발생 건수",
-                showlegend=False,
-                yaxis=dict(range=[0, max(values) * 1.1]) if values else dict(range=[0, 1])
+                showlegend=False
             )
+            fig.update_yaxes(tickformat="d", dtick=1)  # y축을 1 간격 정수로 설정
             st.plotly_chart(fig, config={'displayModeBar': False})
-            create_download_button(fig, "anomaly_patterns", "이상 패턴 발생 현황 다운로드")
-        
+            create_download_button(fig, "anomaly_patterns", "이상 패턴 현황 다운로드")
+
         with col2:
-            # 시간 간격 이상 분석 (히스토그램 -> 밀도 플롯으로 변경)
             if 'delta_ms' in events_df.columns:
-                # 정상 범위 이외의 시간 간격 분석
-                normal_deltas = events_df[
-                    (events_df['delta_ms'] >= 10) & 
-                    (events_df['delta_ms'] <= 30000)
-                ]['delta_ms']
+                delta_series = events_df['delta_ms'].dropna()
+                delta_series = delta_series[delta_series > 0]
+
+                if not delta_series.empty:
+                    import numpy as np
+                    
+                    # 값이 모두 같은 경우 처리
+                    if delta_series.min() == delta_series.max():
+                        # 단일 값에 대한 포인트 차트
+                        single_value = delta_series.iloc[0]
+                        delta_fig = go.Figure()
+                        delta_fig.add_trace(go.Scatter(
+                            x=[single_value],
+                            y=[len(delta_series)],
+                            mode='markers',
+                            marker=dict(
+                                color=PRIMARY_COLOR,
+                                size=20,
+                                line=dict(width=2, color='white')
+                            ),
+                            name='빈도',
+                            text=[f'{single_value}ms: {len(delta_series)}회'],
+                            textposition='top center',
+                            hovertemplate='시간 간격: %{x}ms<br>발생 횟수: %{y}회<extra></extra>'
+                        ))
+                        
+                        delta_fig.update_layout(
+                            title="요청 간 시간 간격 분포",
+                            xaxis_title="시간 간격(ms)",
+                            yaxis_title="빈도",
+                            xaxis=dict(range=[single_value * 0.5, single_value * 1.5]),
+                            yaxis=dict(range=[0, len(delta_series) * 1.2])
+                        )
+                    else:
+                        # 로그 스케일 bins 생성
+                        log_min = np.log10(delta_series.min())
+                        log_max = np.log10(delta_series.max())
+                        log_bins = np.logspace(log_min, log_max, 40)
+                        
+                        # numpy로 히스토그램 계산
+                        counts, bin_edges = np.histogram(delta_series, bins=log_bins)
+                        
+                        # bin 중심점 계산
+                        bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
+                        
+                        delta_fig = go.Figure()
+                        delta_fig.add_trace(go.Bar(
+                            x=bin_centers,
+                            y=counts,
+                            marker_color=PRIMARY_COLOR,
+                            opacity=0.7,
+                            name='빈도'
+                        ))
+                        
+                        delta_fig.update_layout(
+                            title="요청 간 시간 간격 분포",
+                            xaxis_title="시간 간격(ms) [log scale]",
+                            yaxis_title="빈도",
+                            xaxis_type="log",
+                            bargap=0.1
+                        )
+                    
+                    st.plotly_chart(delta_fig, config={'displayModeBar': False})
+                    create_download_button(delta_fig, "delta_ms_hist", "시간 간격 분포 다운로드")
+                else:
+                    st.info("시간 간격 데이터가 없습니다.")
+            else:
+                st.info("시간 간격 분석을 위한 데이터가 준비되지 않았습니다.")
+
+    if 'timestamp' in events_df.columns:
+        # 전역 패턴 매핑에서 정의된 패턴들 사용
+        flagged_cols = []
+        
+        for col in GLOBAL_PATTERN_MAPPING.keys():
+            if col in events_df.columns:
+                try:
+                    # 숫자형 컬럼이고 양수 값이 있는지 확인
+                    if pd.api.types.is_numeric_dtype(events_df[col]) and events_df[col].sum() > 0:
+                        flagged_cols.append(col)
+                    # 이진 플래그 컬럼인 경우
+                    elif events_df[col].dtype == bool and events_df[col].any():
+                        flagged_cols.append(col)
+                except:
+                    continue
+        
+        # 이상 점수가 있다면 임계값 기반으로 이상 패턴 생성
+        if not flagged_cols and 'anomaly_score_final' in events_df.columns:
+            events_df_temp = events_df.copy()
+            threshold = 1.0  # 임계값 설정
+            events_df_temp['high_anomaly_score'] = (events_df_temp['anomaly_score_final'] > threshold).astype(int)
+            if events_df_temp['high_anomaly_score'].sum() > 0:
+                flagged_cols = ['high_anomaly_score']
+                events_df = events_df_temp
+        
+        if flagged_cols:
+            trend_df = events_df[['timestamp'] + flagged_cols].copy()
+            trend_df['timestamp_hour'] = trend_df['timestamp'].dt.floor('H')
+            
+            melted = trend_df.melt(
+                id_vars='timestamp_hour',
+                value_vars=flagged_cols,
+                var_name='pattern',
+                value_name='flag'
+            )
+            melted = melted[melted['flag'] > 0]
+
+            if not melted.empty:
+                time_counts = melted.groupby(['timestamp_hour', 'pattern']).size().reset_index(name='count')
                 
-                if len(normal_deltas) > 0:
-                    # 값 빈도 계산
-                    value_counts = normal_deltas.value_counts().sort_index()
-                    
-                    # 막대 그래프로 표시
-                    fig = go.Figure()
-                    fig.add_trace(go.Bar(
-                        x=[f"{idx:.0f}ms" for idx in value_counts.index],
-                        y=value_counts.values,
-                        marker_color=PRIMARY_COLOR,
-                        opacity=0.8,
-                        text=value_counts.values,
-                        textposition='outside',
-                        marker_line=dict(width=1, color='white')
-                    ))
-                    
-                    fig.update_layout(
-                        title="정상 범위 시간 간격 분포",
-                        xaxis_title="시간 간격(ms)",
-                        yaxis_title="빈도",
-                        showlegend=False,
-                        yaxis=dict(range=[0, value_counts.max() * 1.1]),
-                        xaxis=dict(type='category')  # 카테고리형으로 설정
-                    )
-                    
-                    st.plotly_chart(fig, config={'displayModeBar': False})
-                    create_download_button(fig, "time_intervals", "시간 간격 분포 다운로드")
+                # 패턴명을 일관된 한국어로 변경하고 색상 매핑
+                time_counts['pattern_name'] = time_counts['pattern'].map(get_pattern_display_name)
+                
+                # 패턴별 색상 매핑 생성
+                pattern_color_map = {}
+                for pattern in time_counts['pattern'].unique():
+                    pattern_name = get_pattern_display_name(pattern)
+                    pattern_color_map[pattern_name] = get_pattern_color(pattern)
+                
+                # 시간 범위 계산 (실제 데이터 범위 + 여유)
+                min_time = time_counts['timestamp_hour'].min()
+                max_time = time_counts['timestamp_hour'].max()
+                time_range = [min_time - pd.Timedelta(hours=1), max_time + pd.Timedelta(hours=1)]
+                
+                # 버블 차트로 변경하여 더 직관적인 시각화
+                time_fig = px.scatter(
+                    time_counts,
+                    x='timestamp_hour',
+                    y='pattern_name',  # y축을 패턴으로 변경
+                    size='count',  # 버블 크기를 발생 건수로 설정
+                    color='pattern_name',  # 한국어 패턴명 사용
+                    title='시간대별 이상 패턴 발생 추이',
+                    labels={'timestamp_hour': '시간', 'count': '발생 건수', 'pattern_name': '패턴'},
+                    color_discrete_map=pattern_color_map,  # 일관된 색상 사용
+                    size_max=60,  # 최대 버블 크기 설정
+                    hover_data={'count': True}  # 호버에 발생 건수 표시
+                )
+                
+                time_fig.update_layout(
+                    xaxis_title='시간',
+                    yaxis_title='패턴',  # y축이 패턴명으로 변경
+                    xaxis=dict(
+                        range=time_range,
+                        tickformat='%H:%M',  # 시간:분 형식
+                        dtick=3600000  # 1시간 간격 (밀리초)
+                    ),
+                    showlegend=False,  # 범례 숨기기 (y축 레이블과 중복)
+                    height=400  # 버블 차트에 적절한 높이 설정
+                )
+                
+                st.plotly_chart(time_fig, config={'displayModeBar': False})
+                create_download_button(time_fig, "anomaly_trend", "이상 패턴 추이 다운로드")
+            else:
+                st.info("해당 기간 동안 이상 패턴이 발생하지 않았습니다.")
+        else:
+            st.info("이상 패턴 분석을 위한 데이터가 준비되지 않았습니다.")
 
 def plot_user_ip_analysis(events_df):
     """사용자 및 IP 분석"""
@@ -636,142 +1061,192 @@ def plot_user_ip_analysis(events_df):
     col1, col2 = st.columns(2)
     
     with col1:
-        # 사용자별 이벤트 수 (일반 막대 그래프로 변경)
         if 'user_id' in events_df.columns:
-            user_counts = events_df['user_id'].value_counts().head(10)
-            
-            fig = go.Figure()
-            
-            # #B1B1B2 기반 투명도 색상 생성
-            base_color_hex = 'B1B1B2'
-            base_r, base_g, base_b = int(base_color_hex[:2], 16), int(base_color_hex[2:4], 16), int(base_color_hex[4:], 16)
-            
-            # 사용자별로 다른 투명도 생성
-            transparent_colors = []
-            for i, user in enumerate(user_counts.index):
-                alpha = 0.3 + (i * 0.6) / max(1, len(user_counts.index) - 1)  # 0.3~0.9 투명도
-                transparent_colors.append(f'rgba({base_r},{base_g},{base_b},{alpha})')
-            
-            fig.add_trace(go.Bar(
-                x=user_counts.index,
-                y=user_counts.values,
-                marker_color=transparent_colors,
-                text=user_counts.values,
-                textposition='outside'
-            ))
-            
-            fig.update_layout(
-                title="사용자별 이벤트 수",
-                xaxis_title="사용자 ID",
-                yaxis_title="이벤트 수",
-                showlegend=False,
-                yaxis=dict(range=[0, user_counts.values.max() * 1.1])  # y축 0부터 시작
-            )
-            st.plotly_chart(fig, config={'displayModeBar': False})
-            create_download_button(fig, "user_events", "사용자별 이벤트 수 다운로드")
-    
+            anomaly_cols = [
+                col for col in ['delta_too_fast', 'delta_too_slow', 'has_error_keyword',
+                                 'simultaneous_event', 'message_unusual_length', 'step_jump', 'step_reverse']
+                if col in events_df.columns
+            ]
+
+            temp_df = events_df.copy()
+            if anomaly_cols:
+                temp_df['has_any_anomaly'] = temp_df[anomaly_cols].gt(0).any(axis=1).astype(int)
+            else:
+                temp_df['has_any_anomaly'] = 0
+
+            user_agg = temp_df.groupby('user_id').agg(
+                total_events=('user_id', 'size'),
+                anomaly_events=('has_any_anomaly', 'sum')
+            ).reset_index()
+
+            top_users = user_agg.sort_values('total_events', ascending=False).head(10)
+            if not top_users.empty:
+                # 메인 색상에 점진적 투명도 적용 (이벤트 수가 많을수록 진한 색상)
+                num_users = len(top_users)
+                opacities = [1.0 - (0.7 * i / max(1, num_users - 1)) for i in range(num_users)]
+                
+                user_fig = go.Figure()
+                
+                # 각 사용자마다 개별 막대 추가 (투명도별)
+                for i, (_, user_data) in enumerate(top_users.iterrows()):
+                    user_fig.add_trace(go.Bar(
+                        x=[user_data['total_events']],
+                        y=[user_data['user_id']],
+                        marker_color=hex_to_rgba(PRIMARY_COLOR, opacities[i]),
+                        name=f'사용자 {i+1}',
+                        orientation='h',
+                        text=[user_data['total_events']],
+                        textposition='outside',
+                        showlegend=False
+                    ))
+                
+                user_fig.update_layout(
+                    title="상위 사용자 이벤트 수",
+                    xaxis_title="이벤트 수",
+                    yaxis_title="사용자 ID",
+                    yaxis=dict(autorange='reversed')
+                )
+                user_fig.update_xaxes(tickformat="d", dtick=1)  # x축을 1 간격 정수로 설정
+                st.plotly_chart(user_fig, config={'displayModeBar': False})
+                create_download_button(user_fig, "user_events_ratio", "사용자 이벤트/이상 비율 다운로드")
+
     with col2:
-        # IP 국가별 분포 (새로 추가)
+        # IP 국가 및 내부/외부 분포
         if 'source_ip' in events_df.columns:
             # IP를 국가명으로 변환
             countries = get_country_from_ip(events_df['source_ip'].tolist())
             events_df_temp = events_df.copy()
             events_df_temp['country'] = countries
-            
+
             country_counts = pd.Series(countries).value_counts()
-            
-            fig = go.Figure(data=[go.Pie(
-                labels=country_counts.index,
-                values=country_counts.values,
-                hole=0.3,
-                marker_colors=[PRIMARY_COLOR, SUCCESS_COLOR, WARNING_COLOR][:len(country_counts)]
-            )])
-            
-            fig.update_layout(
-                title="IP 국가별 분포",
-                annotations=[dict(text='국가', x=0.5, y=0.5, font_size=16, showarrow=False)]
+
+            if not country_counts.empty:
+                country_df = country_counts.reset_index(name='이벤트 수')
+                country_df.rename(columns={'index': '국가'}, inplace=True)
+                
+                # 버블 차트를 위한 좌표 생성 (원형 배치)
+                import numpy as np
+                n_countries = len(country_df)
+                angles = np.linspace(0, 2*np.pi, n_countries, endpoint=False)
+                radius_base = 10
+                
+                # 이벤트 수에 따라 반지름 조정 (많은 이벤트일수록 중심에서 멀리)
+                max_events = country_df['이벤트 수'].max()
+                radius_factor = country_df['이벤트 수'] / max_events * 5 + radius_base
+                
+                country_df['x'] = radius_factor * np.cos(angles)
+                country_df['y'] = radius_factor * np.sin(angles)
+                
+                # 조화로운 색상 팔레트 (국가별 다른 색상)
+                harmonious_country_colors = [
+                    '#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8',
+                    '#F7DC6F', '#BB8FCE', '#85C1E9', '#F8C471', '#82E0AA',
+                    '#F1948A', '#7FB3D3', '#D7BDE2', '#A9DFBF', '#F9E79F'
+                ]
+                
+                # 국가별 색상 매핑
+                country_color_map = {
+                    country: harmonious_country_colors[i % len(harmonious_country_colors)]
+                    for i, country in enumerate(country_df['국가'])
+                }
+                
+                country_df['색상'] = country_df['국가'].map(country_color_map)
+                
+                # 버블 차트 생성 (국가명 표기 포함)
+                country_fig = px.scatter(
+                    country_df,
+                    x='x',
+                    y='y',
+                    size='이벤트 수',
+                    color='국가',
+                    color_discrete_map=country_color_map,
+                    size_max=80,
+                    text='국가',  # 버블 안에 국가명 표시
+                    labels={'x': '', 'y': '', '이벤트 수': '이벤트 수', '국가': '국가'},
+                    hover_data={'이벤트 수': True, 'x': False, 'y': False}
+                )
+                
+                # 텍스트 스타일 설정
+                country_fig.update_traces(
+                    textposition="middle center",
+                    textfont=dict(size=10, color="white", family="Arial Black")
+                )
+                
+                country_fig.update_layout(
+                    title="IP 국가별 이벤트 분포",
+                    xaxis=dict(showgrid=False, showticklabels=False, zeroline=False),
+                    yaxis=dict(showgrid=False, showticklabels=False, zeroline=False),
+                    plot_bgcolor='rgba(0,0,0,0)',
+                    showlegend=True,
+                    legend_title="국가",
+                    height=500
+                )
+                
+                st.plotly_chart(country_fig, config={'displayModeBar': False})
+                create_download_button(country_fig, "ip_countries_bubble", "IP 국가 분포 다운로드")
+
+    # 내부/외부 IP 비교 및 상위 IP 하이라이트
+    if {'source_ip', 'source_ip_is_internal'}.issubset(events_df.columns):
+        col3, col4 = st.columns(2)
+
+        with col3:
+            internal_counts = (
+                events_df.groupby('source_ip_is_internal')['source_ip']
+                .count()
+                .reset_index(name='이벤트 수')
             )
-            fig.update_traces(textposition='inside', textinfo='percent+label')
-            st.plotly_chart(fig, config={'displayModeBar': False})
-            create_download_button(fig, "ip_countries", "IP 국가별 분포 다운로드")
-    
-    # IP별 이벤트 수 (전체 너비로 표시, 워드클라우드 스타일)
-    if 'source_ip' in events_df.columns:
-        ip_counts = events_df['source_ip'].value_counts().head(10)
-        
-        # 버블 차트로 표시
-        fig = go.Figure()
-        
-        # 버블 크기에 따른 그라데이션 색상
-        bubble_sizes = ip_counts.values * 50
-        max_size = bubble_sizes.max()
-        min_size = bubble_sizes.min()
-        
-        # 크기에 비례한 색상 그라데이션 (작은 버블: 연한 색, 큰 버블: 진한 색)
-        bubble_colors = []
-        text_colors = []  # 텍스트 색상 배열
-        for size in bubble_sizes:
-            intensity = (size - min_size) / max(1, max_size - min_size)  # 0~1 정규화
-            # PRIMARY_COLOR 기반으로 투명도/밝기 조정
-            r, g, b = 0, 89, 155  # PRIMARY_COLOR (#00599B) RGB 값
-            alpha = 0.3 + (intensity * 0.7)  # 0.3~1.0 투명도
-            bubble_colors.append(f'rgba({r},{g},{b},{alpha})')
-            
-            # 작은 버블은 검은색 텍스트, 큰 버블은 흰색 텍스트
-            if intensity < 0.5:  # 작은 버블
-                text_colors.append('black')
-            else:  # 큰 버블
-                text_colors.append('white')
-        
-        # 텍스트 색상별로 별도 trace 생성
-        small_bubble_indices = [i for i, color in enumerate(text_colors) if color == 'black']
-        large_bubble_indices = [i for i, color in enumerate(text_colors) if color == 'white']
-        
-        # 작은 버블 (검은색 텍스트)
-        if small_bubble_indices:
-            fig.add_trace(go.Scatter(
-                x=[i for i in small_bubble_indices],
-                y=[1] * len(small_bubble_indices),
-                mode='markers+text',
-                marker=dict(
-                    size=[bubble_sizes[i] for i in small_bubble_indices],
-                    color=[bubble_colors[i] for i in small_bubble_indices],
-                    line=dict(width=2, color='rgba(0,89,155,0.8)')
-                ),
-                text=[ip_counts.index[i] for i in small_bubble_indices],
-                textposition="middle center",
-                textfont=dict(size=12, color='black'),
-                name='작은 IP',
-                showlegend=False
-            ))
-        
-        # 큰 버블 (흰색 텍스트)
-        if large_bubble_indices:
-            fig.add_trace(go.Scatter(
-                x=[i for i in large_bubble_indices],
-                y=[1] * len(large_bubble_indices),
-                mode='markers+text',
-                marker=dict(
-                    size=[bubble_sizes[i] for i in large_bubble_indices],
-                    color=[bubble_colors[i] for i in large_bubble_indices],
-                    line=dict(width=2, color='rgba(0,89,155,0.8)')
-                ),
-                text=[ip_counts.index[i] for i in large_bubble_indices],
-                textposition="middle center",
-                textfont=dict(size=12, color='white'),
-                name='큰 IP',
-                showlegend=False
-            ))
-        
-        fig.update_layout(
-            title="IP별 이벤트 수 (버블 크기 = 이벤트 수)",
-            xaxis=dict(showticklabels=False, showgrid=False, zeroline=False),
-            yaxis=dict(showticklabels=False, showgrid=False, zeroline=False),
-            showlegend=False,
-            height=300
-        )
-        st.plotly_chart(fig, config={'displayModeBar': False})
-        create_download_button(fig, "ip_events_bubble", "IP별 이벤트 버블차트 다운로드")
+            internal_counts['IP 유형'] = internal_counts['source_ip_is_internal'].map({1: '내부', 0: '외부'})
+            internal_counts = internal_counts.drop(columns=['source_ip_is_internal'])
+
+            if not internal_counts.empty:
+                internal_fig = px.pie(
+                    internal_counts,
+                    names='IP 유형',
+                    values='이벤트 수',
+                    color='IP 유형',
+                    color_discrete_map={'내부': SUCCESS_COLOR, '외부': ERROR_COLOR}
+                )
+                internal_fig.update_layout(title="내부 vs 외부 IP 비중")
+                st.plotly_chart(internal_fig, config={'displayModeBar': False})
+                create_download_button(internal_fig, "internal_external_ip", "내부외부 IP 비중 다운로드")
+
+        with col4:
+            ip_counts = (
+                events_df.groupby(['source_ip', 'source_ip_is_internal'])
+                .size()
+                .reset_index(name='이벤트 수')
+            )
+            top_ips = ip_counts.sort_values('이벤트 수', ascending=False).head(12)
+
+            if not top_ips.empty:
+                # 메인 색상에 점진적 투명도 적용 (이벤트 수가 많을수록 진한 색상)
+                num_ips = len(top_ips)
+                opacities = [1.0 - (0.7 * i / max(1, num_ips - 1)) for i in range(num_ips)]
+                
+                ip_fig = go.Figure()
+                
+                # 각 IP마다 개별 막대 추가 (투명도별)
+                for i, (_, ip_data) in enumerate(top_ips.iterrows()):
+                    ip_fig.add_trace(go.Bar(
+                        x=[ip_data['이벤트 수']],
+                        y=[ip_data['source_ip']],
+                        marker_color=hex_to_rgba(PRIMARY_COLOR, opacities[i]),
+                        name=f'IP {i+1}',
+                        orientation='h',
+                        text=[ip_data['이벤트 수']],
+                        textposition='outside',
+                        showlegend=False
+                    ))
+                
+                ip_fig.update_layout(
+                    title="상위 IP 이벤트 수",
+                    xaxis_title="이벤트 수",
+                    yaxis_title="IP 주소",
+                    yaxis=dict(autorange='reversed')
+                )
+                ip_fig.update_xaxes(tickformat="d", dtick=1)  # x축을 1 간격 정수로 설정 (horizontal bar)
+                st.plotly_chart(ip_fig, config={'displayModeBar': False})
+                create_download_button(ip_fig, "top_ip_events", "상위 IP 이벤트 다운로드")
 
 def show_data_quality_report(events_df, sessions_df):
     """데이터 품질 리포트"""
@@ -845,17 +1320,22 @@ def main():
     
     # 사이드바 설정
     st.sidebar.header("대시보드 설정")
-    st.sidebar.markdown("---")
     
     # 개요 메트릭
     plot_overview_metrics(stats)
     st.markdown("---")
     
+    # 성능 최적화: 탭별 지연 로딩
+    if 'active_tab' not in st.session_state:
+        st.session_state.active_tab = '세션 분석'
+    
     # 탭 구성
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
-        "세션 분석", "시계열 분석", "인증 플로우", 
-        "이상 패턴", "사용자/IP 분석", "데이터 품질"
+        "세션 분석  |", "시계열 분석  |", "인증 플로우  |", 
+        "이상 패턴  |", "사용자/IP 분석  |", "데이터 품질  |"
     ])
+    
+    # 탭 클릭 감지를 위한 간단한 방법 (실제 탭 변경은 자동으로 처리됨)
     
     with tab1:
         st.header("세션 기반 분석")
@@ -916,7 +1396,11 @@ def main():
             st.sidebar.write("**이상 패턴 발생:**")
             for pattern, count in stats['anomaly_patterns'].items():
                 if count > 0:
-                    st.sidebar.write(f"- {pattern.replace('_', ' ')}: {count}개")
+                      st.sidebar.write(f"- {get_pattern_display_name(pattern)}: {count}개")
+
+    # 로고
+    st.sidebar.markdown("---")                      
+    st.sidebar.image(logo_path, width=120)
 
 if __name__ == "__main__":
     main()

@@ -9,3 +9,4 @@
 /SYSTEM_LOGS/poc/temp/
 /FORMATTED/analysis_results/
 /FORMATTED/processed_data/
+/FORMATTED/__pycache__/
