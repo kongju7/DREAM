@@ -20,11 +20,11 @@ from typing import List, Dict, Any, Optional
 
 service = "MagicLine"
 
-INPUT_PATH = f"/home/kongju/DATA/DREAM/{service}/catalina.out"
+INPUT_PATH = f"/home/kongju/DATA/DREAM/SYSTEM_LOGS/{service}/catalina.out"
 
 
-OUT_NDJSON = f"/home/kongju/DREAM/{service}/output/catalina_out_structured.ndjson"
-OUT_SCHEMA = f"/home/kongju/DREAM/{service}/output/catalina_out_schema.json"
+OUT_NDJSON = f"/home/kongju/DREAM/SYSTEM_LOGS/{service}/output/catalina_out_structured.ndjson"
+OUT_SCHEMA = f"/home/kongju/DREAM/SYSTEM_LOGS/{service}/output/catalina_out_schema.json"
 
 # ====== 로그 헤더 패턴들 ======
 # 1) Tomcat 기본: 18-Mar-2025 10:51:51.333 정보 [main] org.apache.catalina... 메시지

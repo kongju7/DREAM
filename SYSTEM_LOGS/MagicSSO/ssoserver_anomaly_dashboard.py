@@ -26,7 +26,7 @@ import base64
 
 # color_config 모듈 import (없으면 기본값 사용)
 try:
-    sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../..'))
     from color_config import (
         COLORS, COLOR_PALETTE, LEVEL_COLORS, GRAPH_COLORS,
         get_color, get_color_palette, get_level_colors, get_graph_color
@@ -269,7 +269,7 @@ def main():
     st.markdown("---")
     
     # 파일 경로
-    file_path = "/home/kongju/DREAM/MagicSSO/output/ssoserver_structured.ndjson"
+    file_path = "/home/kongju/DREAM/SYSTEM_LOGS/MagicSSO/output/ssoserver_structured.ndjson"
     
     st.sidebar.header("대시보드 설정")
     
@@ -321,8 +321,8 @@ def main():
     
     # 탭 구성
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
-        "이상탐지 결과", "시계열 분석", "로그 레벨 분석", 
-        "SSO 특화 분석", "상세 분석", "로그 검색"
+        "이상탐지 결과  |", "시계열 분석  |", "로그 레벨 분석  |", 
+        "SSO 특화 분석  |", "상세 분석  |", "로그 검색  |"
     ])
     
     with tab1:

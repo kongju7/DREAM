@@ -25,7 +25,7 @@ import io
 import base64
 
 # 상위 디렉토리의 color_config 모듈 import
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../..'))
 from color_config import (
     COLORS, COLOR_PALETTE, LEVEL_COLORS, GRAPH_COLORS,
     get_color, get_color_palette, get_level_colors, get_graph_color
@@ -199,8 +199,8 @@ def main():
     st.markdown("---")
     
     # 파일 업로드 또는 기본 파일 사용
-    # file_path = "/home/kongju/DREAM/MagicIAM/output/catalina_out_structured.ndjson" # 3 GB가 넘어서 사용하기 어려움 
-    file_path = "/home/kongju/DREAM/MagicIAM/output/catalina_out_partial_structured.ndjson"
+    # file_path = "/home/kongju/DREAM/SYSTEM_LOGS/MagicIAM/output/catalina_out_structured.ndjson" # 3 GB가 넘어서 사용하기 어려움 
+    file_path = "/home/kongju/DREAM/SYSTEM_LOGS/MagicIAM/output/catalina_out_partial_structured.ndjson"
     
     st.sidebar.header("대시보드 설정")
     

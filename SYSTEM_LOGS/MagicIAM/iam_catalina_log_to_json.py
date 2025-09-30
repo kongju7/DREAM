@@ -20,11 +20,12 @@ from typing import List, Dict, Any, Optional
 
 service = "MagicIAM"
 
-INPUT_PATH = f"/home/kongju/DATA/DREAM/{service}/catalina.out"
-# INPUT_PATH = f"/home/kongju/DATA/DREAM/{service}/catalina_partial.out"  # 테스트트
+# INPUT_PATH = f"/home/kongju/DATA/DREAM/SYSTEM_LOGS/{service}/catalina.out"
+INPUT_PATH = f"/home/kongju/DATA/DREAM/SYSTEM_LOGS/{service}/catalina_partial.out"  # 테스트
 
-OUT_NDJSON = f"/home/kongju/DREAM/{service}/output/catalina_out_structured.ndjson"
-OUT_SCHEMA = f"/home/kongju/DREAM/{service}/output/catalina_out_schema.json"
+# OUT_NDJSON = f"/home/kongju/DREAM/SYSTEM_LOGS/{service}/output/catalina_out_structured.ndjson"
+OUT_NDJSON = f"/home/kongju/DREAM/SYSTEM_LOGS/{service}/output/catalina_out_partial_structured.ndjson"   # 테스트
+OUT_SCHEMA = f"/home/kongju/DREAM/SYSTEM_LOGS/{service}/output/catalina_out_schema.json"
 
 # ====== 로그 헤더 패턴들 ======
 # 1) Tomcat 기본: 18-Mar-2025 10:51:51.333 정보 [main] org.apache.catalina... 메시지

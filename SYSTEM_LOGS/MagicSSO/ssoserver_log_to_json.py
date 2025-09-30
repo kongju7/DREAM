@@ -22,11 +22,11 @@ from typing import List, Dict, Any, Optional
 
 service = "MagicSSO"
 
-INPUT_PATH = f"/home/kongju/DATA/DREAM/{service}/idp/ssoserver.log"
+INPUT_PATH = f"/home/kongju/DATA/DREAM/SYSTEM_LOGS/{service}/idp/ssoserver.log"
 # INPUT_PATH = f"/home/kongju/DATA/DREAM/{service}/ssoserver_partial.log"  # 테스트용
 
-OUT_NDJSON = f"/home/kongju/DREAM/{service}/output/ssoserver_structured.ndjson"
-OUT_SCHEMA = f"/home/kongju/DREAM/{service}/output/ssoserver_schema.json"
+OUT_NDJSON = f"/home/kongju/DREAM/SYSTEM_LOGS/{service}/output/ssoserver_structured.ndjson"
+OUT_SCHEMA = f"/home/kongju/DREAM/SYSTEM_LOGS/{service}/output/ssoserver_schema.json"
 
 # ====== 로그 헤더 패턴들 ======
 # SSO 서버 로그 패턴: 14:13:17.330 [main] DEBUG c.d.s.server.provider.EnvironInform - ### TEST_IDP 임시 라이센스 만료
